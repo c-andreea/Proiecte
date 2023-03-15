@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+ <div class="bg-image"></div>
+  <!--  <div class="blu"></div>--->
+<div class="cod">
+  <p>DROP VIEW clienti_ion_caprioara;<br>
+    DROP TABLE Rata;<br>
+    DROP TABLE Contract_j;<br>
+    DROP TABLE Contract_m;<br>
+    DROP TABLE PERSOANA;</p>
+    
+    <p>--------------------6.01</p>
+    
+    <p>CREATE TABLE Persoana (<br>
+     id_p int NOT NULL,<br>
+     nume VARCHAR(255) NOT NULL,<br>
+     email VARCHAR(255),<br>
+     adresa VARCHAR(255) NOT NULL,<br>
+     PRIMARY KEY (id_p)</p>
+    
+    <p>);</p>
+    
+    <p>
+    CREATE TABLE Contract_m (<br>
+     id_cm NUMBER PRIMARY KEY,<br>
+     data DATE NOT NULL,<br>
+     functie VARCHAR(255) NOT NULL,<br>
+     salar_baza NUMBER NOT NULL,<br>
+     comision NUMBER NOT NULL,<br>
+     id_angajat NUMBER NOT NULL,<br>
+     FOREIGN KEY (id_angajat) REFERENCES Persoana(id_p)<br>
+    );</p>
+    
+    <p>
+    CREATE TABLE Contract_j (<br>
+     id_cj NUMBER PRIMARY KEY,<br>
+     data DATE NOT NULL,<br>
+     obiect VARCHAR(255) NOT NULL,<br>
+     onorar NUMBER NOT NULL,<br>
+     nr_pagini NUMBER NOT NULL,<br>
+     id_client NUMBER NOT NULL,<br>
+     id_avocat NUMBER NOT NULL,<br>
+     FOREIGN KEY (id_client) REFERENCES Persoana(id_p),<br>
+     FOREIGN KEY (id_avocat) REFERENCES Persoana(id_p)<br>
+    );</p>
+    
+    <p></p>
+    
+    <p>CREATE TABLE Rata (<br>
+     id_cj NUMBER NOT NULL,<br>
+     id_r NUMBER PRIMARY KEY NOT NULL,<br>
+     data DATE NOT NULL,<br>
+     suma NUMBER ,<br>
+     FOREIGN KEY (id_cj) REFERENCES Contract_j(id_cj)<br>
+    );</p>
+    
+    <p>
+    ALTER TABLE Persoana<br>
+    ADD telefon VARCHAR(255);</p>
+    
+    <p>
+    ---------------6.02</p>
+    
+    <p>ALTER TABLE CONTRACT_J <br>
+    ADD CONSTRAINT &quot;CHK_OBIECT&quot; CHECK (obiect IN ('actiune civila', 'actiune penala'));</p>
+    
+    <p>ALTER TABLE Contract_j ADD CONSTRAINT &quot;obiect_ck&quot; CHECK((obiect = 'actiune civila' AND onorar > 500) OR <br>
+    (obiect != 'actiune civila' AND onorar <= 500 )) ;</p>
+    
+    <p>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (1, 'Ion Caprioara', 'ioncaprioara@mail.com', 'Strada Primavarii, numarul 23', '040180993');<br>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (2, 'Traian Popescu', 'traianpopescu@mail.com', 'Strada Mihai viteazu, numarul 67', '072735955');<br>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (3, 'Robert Dinu', 'robertdinu@mail.com', 'Strada Bucuresti, numarul 456', '075783720');<br>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (4, 'Virgil Danu', 'virgildanu@mail.com', 'Strada Muzeului, numarul 420', '075185481');<br>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (5, 'Florin Apostol', 'florinapostol@mail.com', 'Strada Patriei, numarul 90', '028924451');<br>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (6, 'Georgiana Matescu', 'georgianamatescu@mail.com', 'Strada albinei, numarul 75', '054026104');<br>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (7, 'Stelian Chirca', 'stelianchirca@mail.com', 'Strada Macesului, numarul 81', '037485630');<br>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (8, 'Gabriela Marin', 'gabrielamarin@email.com', 'Strada Crizantemei, numarul 49', '098433519');<br>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (9, 'Constantin Istrat', 'constantinistrat@mail.com', 'Strada Alunului, numarul 369', '039040379');<br>
+    INSERT INTO Persoana (id_p, nume, email, adresa, telefon) VALUES (10, 'Ionut Iordache', 'ionutiordache@mail.com', 'Strada Izvorului, numarul 670', '080243349');</p>
+    
+    <p>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (1, TO_DATE('2022-11-04','YYYY-MM-DD'), 'actiune civila', 1000, 20, 1, 4);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (2, TO_DATE('2022-01-20','YYYY-MM-DD'), 'actiune penala', 200, 50, 3, 5);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (3,TO_DATE( '2020-06-30','YYYY-MM-DD'), 'actiune civila', 1500, 25, 7, 6);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (4,TO_DATE( '2022-09-24','YYYY-MM-DD'), 'actiune penala', 178, 30, 8, 4);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (5,TO_DATE( '2021-12-05','YYYY-MM-DD'), 'actiune civila', 1560, 34, 9, 5);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (6, TO_DATE('2022-01-15','YYYY-MM-DD'), 'actiune civila', 1780, 10, 1, 6);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (7,TO_DATE( '2022-02-03','YYYY-MM-DD'), 'actiune penala', 330, 18, 3, 4);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (8,TO_DATE( '2021-10-01','YYYY-MM-DD') , 'actiune penala', 360, 26, 7, 5);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (9, TO_DATE( '2022-07-04','YYYY-MM-DD'), 'actiune civila', 900, 40, 8, 6);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (10,TO_DATE( '2020-10-20','YYYY-MM-DD'), 'actiune penala', 100, 14, 9, 4);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (11,TO_DATE( '2022-10-02','YYYY-MM-DD') , 'actiune penala', 260, 26, 7, 3);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (12,TO_DATE( '2022-10-10','YYYY-MM-DD') , 'actiune civila', 1000, 26, 9, 5);<br>
+    INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat) VALUES (13,TO_DATE( '2022-11-10','YYYY-MM-DD') , 'actiune civila', 1000, 22, 3, 1);</p>
+    
+    <p>INSERT INTO Contract_m (id_cm, data, functie, salar_baza, comision, id_angajat) VALUES (1, TO_DATE('2018-06-01','YYYY-MM-DD'), 'avocat', 4000, 0.5, 4);<br>
+    INSERT INTO Contract_m (id_cm, data, functie, salar_baza, comision, id_angajat) VALUES (2, TO_DATE('2016-01-20','YYYY-MM-DD'), 'avocat', 5000, 0.8, 5);<br>
+    INSERT INTO Contract_m (id_cm, data, functie, salar_baza, comision, id_angajat) VALUES (3,TO_DATE( '2020-03-24','YYYY-MM-DD'), 'avocat', 4500, 0.6, 6);<br>
+    INSERT INTO Contract_m (id_cm, data, functie, salar_baza, comision, id_angajat) VALUES (4,TO_DATE( '2015-05-01','YYYY-MM-DD'), 'notar', 4000, 0.5, 2);<br>
+    INSERT INTO Contract_m (id_cm, data, functie, salar_baza, comision, id_angajat) VALUES (5, TO_DATE('2022-08-11','YYYY-MM-DD'), 'notar', 3000, 0.1, 9);</p>
+    
+    <p>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (1, 1,TO_DATE( '2022-12-01','YYYY-MM-DD'), 500);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (1, 11,TO_DATE( '2022-12-06','YYYY-MM-DD'), 500);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (2, 2, TO_DATE('2022-12-01','YYYY-MM-DD'), 200);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (3, 3, TO_DATE('2022-12-01','YYYY-MM-DD'), 1000);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (4, 4,TO_DATE( '2022-12-01','YYYY-MM-DD'), 178);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (5, 5,TO_DATE( '2022-12-01','YYYY-MM-DD'), 1500);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (6, 6, TO_DATE('2022-12-01','YYYY-MM-DD'), 1500);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (7, 7, TO_DATE('2022-12-01','YYYY-MM-DD'), 330);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (8, 8,TO_DATE( '2022-12-01','YYYY-MM-DD'), 400);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (9,9, TO_DATE('2022-12-01','YYYY-MM-DD'), 900);<br>
+    INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (10, 10,TO_DATE( '2022-12-01','YYYY-MM-DD'),0);</p>
+    
+    <p>
+    -- --6.03</p>
+    
+    <p>SELECT *FROM CONTRACT_J WHERE EXTRACT(YEAR FROM data) = 2022 <br>
+     AND EXTRACT(MONTH FROM data) = 10 AND ONORAR BETWEEN 900 AND 1500<br>
+    ORDER BY DATA ASC;</p>
+    
+    <p>SELECT *FROM CONTRACT_M WHERE FUNCTIE like 'a%'<br>
+    ORDER BY SALAR_BAZA DESC, FUNCTIE ASC;<br>
+    -- -- -- 6.04</p>
+    
+    <p>SELECT nume <br>
+    FROM Persoana<br>
+    JOIN Contract_m <br>
+     ON Persoana.id_p = Contract_m.id_angajat</p>
+    
+    <p>WHERE EXTRACT(YEAR FROM Contract_m.data) = 2022<br>
+     AND Contract_m.functie != 'avocat';</p>
+    
+    <p></p>
+    
+    <p> SELECT DISTINCT cj1.id_cj AS id_cj1, cj2.id_cj AS id_cj2<br>
+    FROM Contract_j cj1<br>
+    JOIN Contract_j cj2<br>
+     ON cj1.id_avocat = cj2.id_avocat<br>
+     AND cj1.id_cj < cj2.id_cj<br>
+     AND cj1.id_client <> cj2.id_client;</p>
+    
+    <p></p>
+    
+    <p>
+    -----------------------------6.05<br>
+    SELECT *<br>
+    FROM Contract_m cm<br>
+    WHERE EXISTS (<br>
+     SELECT *<br>
+     FROM Contract_m cm2<br>
+     WHERE cm2.comision = cm.comision<br>
+     AND cm2.id_cm != cm.id_cm<br>
+    );</p>
+    
+    <p></p>
+    
+    <p>SELECT p.nume<br>
+    FROM Persoana p<br>
+    WHERE p.id_p IN (<br>
+     SELECT cj.id_avocat<br>
+     FROM Contract_j cj<br>
+     WHERE cj.onorar = (<br>
+     SELECT MAX(cj2.onorar)<br>
+     FROM Contract_j cj2<br>
+     )<br>
+    );</p>
+    
+    <p>-------------------------------6.06</p>
+    
+    <p>SELECT p.nume, AVG(cj.onorar)<br>
+    FROM Persoana p<br>
+    JOIN Contract_j cj ON p.id_p = cj.id_avocat<br>
+    WHERE cj.data >= DATE '2022-01-01' AND cj.data < DATE '2023-01-01'<br>
+    GROUP BY p.nume;</p>
+    
+    <p>
+    SELECT cj.id_cj<br>
+    FROM Contract_j cj<br>
+    WHERE NOT EXISTS (<br>
+     SELECT *<br>
+     FROM Rata r<br>
+     WHERE cj.id_cj = r.id_cj<br>
+     AND r.suma >= cj.onorar<br>
+    );</p>
+    
+    <p>
+    ---------------------------6.07<br>
+    INSERT INTO Contract_m (id_cm, data, functie, salar_baza, comision, id_angajat)<br>
+    VALUES (80, DATE '2022-09-01', 'avocat', 10000, 12.5, 1);</p>
+    
+    <p>DELETE FROM Contract_j cj<br>
+    WHERE cj.data < DATE '2021-01-01'<br>
+    AND NOT EXISTS (<br>
+     SELECT *<br>
+     FROM Rata r<br>
+     WHERE cj.id_cj = r.id_cj<br>
+    );</p>
+    
+    <p>
+    UPDATE Contract_m<br>
+    SET salar_baza = CASE<br>
+     WHEN functie != 'avocat' THEN salar_baza * 1.02<br>
+     WHEN EXTRACT(YEAR FROM Contract_m.data) <= 2017 THEN salar_baza * 1.025<br>
+     ELSE salar_baza<br>
+    END;</p>
+    
+    <p>
+    -----------6.08<br>
+    CREATE OR REPLACE TRIGGER TRIGGER_onorar<br>
+    BEFORE UPDATE OF onorar ON Contract_j FOR EACH ROW<br>
+    DECLARE<br>
+     Suma_rata int;<br>
+    BEGIN <br>
+     SELECT suma into Suma_rata<br>
+     FROM Rata r<br>
+     WHERE r.id_cj = :NEW.id_cj AND suma is NOT NULL;<br>
+     if(Suma_rata is NOT NULL) THEN<br>
+     RAISE_APPLICATION_ERROR(-20500, 'Nu se poate schimba onorariul');<br>
+     END IF;<br>
+    END;<br>
+    /<br>
+    --UPDATE Contract_j <br>
+    --SET onorar = 600<br>
+    --WHERE id_cj = 9;</p>
+    
+    <p></p>
+    
+    <p>
+    CREATE OR REPLACE TRIGGER prevent_invalid_rate<br>
+    BEFORE INSERT ON Rata<br>
+    FOR EACH ROW<br>
+    DECLARE <br>
+    data_cj Contract_j.data%TYPE;<br>
+    suma_rata int;<br>
+    onorar_cj int;<br>
+    BEGIN <br>
+     SELECT cj.data into data_cj <br>
+     FROM Contract_j cj<br>
+     WHERE cj.id_cj = :new.id_cj;</p>
+    
+    <p> SELECT SUM(r.suma) into suma_rata<br>
+     FROM Rata r<br>
+     WHERE r.id_cj = :new.id_cj;</p>
+    
+    <p> SELECT cj.onorar into onorar_cj<br>
+     FROM Contract_j cj<br>
+     WHERE cj.id_cj = :new.id_cj;</p>
+    
+    <p>IF( :new.data <= data_cj ) THEN<br>
+     RAISE_APPLICATION_ERROR(-20500, 'Rata nu corespunde datei');<br>
+     END IF;<br>
+    IF( (:new.suma + suma_rata)> onorar_cj) THEN<br>
+     RAISE_APPLICATION_ERROR(-20500, 'Valoare totala depaseste onorariul');<br>
+     <br>
+    END IF;</p>
+    
+    <p>END;</p>
+    
+    <p>--INSERT INTO Rata (id_cj, id_r, data, suma) VALUES (1, 13,TO_DATE( '2022-12-11','YYYY-MM-DD'), 500);<br>
+    /</p>
+    
+    <p></p>
+    
+    <p>CREATE VIEW clienti_ion_caprioara AS<br>
+    SELECT c.id_client, b.nume nume_client, b.email, b.adresa, id_cj, data, obiect, <br>
+    onorar, nr_pagini<br>
+    FROM Persoana a, Contract_j c, Persoana b <br>
+    WHERE a.nume = 'Ion Caprioara' AND<br>
+    c.id_avocat = a.id_p AND <br>
+    b.id_p = c.id_client;</p>
+    
+    <p>CREATE OR REPLACE TRIGGER insert_ion_caprioara<br>
+    INSTEAD OF INSERT ON Clienti_ion_caprioara<br>
+    FOR EACH ROW<br>
+    DECLARE<br>
+    pers int;<br>
+    BEGIN <br>
+     SELECT id_p into pers<br>
+     FROM Persoana<br>
+     WHERE nume = 'Ion Caprioara';</p>
+    
+    <p> INSERT INTO Persoana (id_p, nume, email, adresa)<br>
+     VALUES (:new.id_client, :new.nume_client, :new.email, :new.adresa);</p>
+    
+    <p> INSERT INTO Contract_j (id_cj, data, obiect, onorar, nr_pagini, id_client, id_avocat)<br>
+     VALUES (:new.id_cj, :new.data, :new.obiect, :new.onorar, :new.nr_pagini, :new.id_client, pers);<br>
+    END; <br>
+    /</p>
+    
+    <p>--INSERT INTO Clienti_ion_caprioara VALUES(16,'Dorel Popa','dorelpopa@mail.com','Strada Verii, numarul 57',20,TO_DATE('2022-09-05','YYYY-MM-DD'),'actiune penala',400,23);</p>
+    
+    <p>--SELECT *<br>
+    --FROM Clienti_ion_caprioara;<br>
+    </p></div>
+    <a class="btn btn-primary" href="index.html" role="button">Inapoi</a>
+</body>
+</html>

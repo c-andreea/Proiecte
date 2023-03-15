@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+ <div class="bg-image"></div>
+  <!--  <div class="blu"></div>--->
+  <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Problema1')">Problema 1</button>
+            <button class="tablinks" onclick="openCity(event, 'Problema2')">Problema 2</button>
+            <button class="tablinks" onclick="openCity(event, 'Problema3')">Problema 3</button>
+            <button class="tablinks" onclick="openCity(event, 'Problema4')">Problema 4</button>
+            <button class="tablinks" onclick="openCity(event, 'Problema5')">Problema 5</button>
+          </div>
+          
+          <div id="Problema1" class="tabcontent">
+            <table class="table">
+              <thead>
+              <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Action</th>
+              </tr>
+              <tbody>
+              <?php
+              $servername = "localhost";
+              $username = "root";
+              $password = "";
+              $database = "cabinet_avocatura";
+              // Create connection
+              $connection = new mysqli($servername, $username, $password, $database);
+              // Check connection
+              if ($connection->connect_error) {
+              die("Connection failed:". $connection->connect_error);
+              
+              } 
+              $sql = "SELECT * FROM persoana";
+              $result = $connection->query($sql);
+              if (!$result) {
+                  die("Invalid query: ". $connection->error);
+                  }
+              
+              
+                  // read data of each row
+              while ($row = $result->fetch_assoc()) {
+                  echo "
+                  <tr>
+                  <td>$row[id_p]</td>
+                  <td>$row[nume]</td>
+                  <td>$row[email]</td>
+                  <td>$row[telefon]</td>
+                  <td>$row[adresa] </td>
+                  <td>
+                  <a class='btn btn-primary btn-sm' href='/myshop/edit.php?id'>Edit</a>
+                  <a class='btn btn-danger btn-sm' href='/myshop/delete.php'>Delete</a>
+                  </td>
+                  </tr>";}
+                  
+              ?>
+              </thead>
+              </table>
+          
+            </div>
+          
+          <div id="Problema2" class="tabcontent">
+            <div class="def"> <font color="#86c232"><h1>Cerinţa</h1></font>
+            <h3> <p> Se dă un graf neorientat cu n (n<=100) vârfuri si m muchii prin lista muchiilor. Afisați toate subgrafurile pe care le are. Fiecare subgraf va fi afișat astfel:
+              - vârfurile lui
+              - matricea de adiacență</p></h3>
+              <h1><a href="C:\Users\ASUS\Desktop\Grafuri neorientate\problema2\main.cpp">Rezolvare</a></h1></div>
+          </div>
+          
+          <div id="Problema3" class="tabcontent">
+            <div class="def"> <font color="#86c232"><h1>Cerinţa</h1></font>
+            <h3><p>Se dau două grafuri neorientate G1 și G2 cu n (n<=100) vârfuri și m1, respectiv m2 muchii prin listele muchiilor, în două fișiere graf1.in, respectiv graf2.in. Verificați dacă unul dintre ele este graf parțial al celuilalt. Se va preciza dacă G1 este graf parțial al lui G2, dacă G2 este graf parțial al lui G1 sau NU dacă niciunul dintre ele este graf parțial al celuilalt.</p>
+            </h3><h1><a href="C:\Users\ASUS\Desktop\Grafuri neorientate\problema3\main.cpp">Rezolvare</a></h1></div>
+          </div>
+          <div id="Problema4" class="tabcontent">
+            <div class="def"><font color="#86c232"><h1>Cerinţa</h1></font>
+            <h3><p>Se da un graf neorientat cu n varfuri si m muchii. Determinati numarul minim de culori cu care se pot colora varfurile grafului astfel incat oricare doua varfuri adiacente sa aiba culori diferite. Numerotand apoi culorile necesare, realizati o colorare a varfurilor grafului dat si afisati pentru fiecare culoare nodurile care se coloreaza cu ea.</p>
+           </h3> <h1><a href="C:\Users\ASUS\Desktop\Grafuri neorientate\problema4\main.cpp">Rezolvare</a></h1>
+          </div> </div>
+          <div id="Problema5" class="tabcontent">
+            <div class="def"><font color="#86c232"><h1>Cerinţa</h1></font>
+           <h3><p>Se da un graf neorientat cu n noduri si m muchii precizat prin lista muchiilor. Calculati distantele minime de la un nod citit s la toate celelalte noduri ale grafului. Distanta minima dintre doua varfuri este egala cu lungimea celui mai scurt lant care are cele doua noduri ca extremitati.</p>
+           </h3><h1><a href="C:\Users\ASUS\Desktop\Grafuri neorientate\problema5\main.cpp">Rezolvare</a></h1>
+          </div>
+          <script>
+          function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+          </script>
+
+</body>
+</html>
