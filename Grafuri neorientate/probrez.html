@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+       
+    </head>
+    <body bgcolor="#222629">
+        <!--------Navbar--------->
+        
+        <div class="navbar">
+          <a href="grafneorientat.html">Home</a>
+          <a href="istoric.html">Istoric</a>
+          <a href="aplicatii.html">Aplicații</a>
+          <div class="dropdown">
+            <button class="dropbtn">Teorie
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="definitii.html">Definiție</a> 
+              <a href="reprezentare.html">Reprezentare</a>
+              <a href="tip.html">Tipuri de grafuri</a>
+              <a href="conexitate.html">Conexitate</a> 
+              <a href="parcurgere.html">Parcurgere</a>
+              <a href="gafh.html">Graf hemiltonian</a>
+              <a href="grafe.html">Graf eulerian</a>
+            </div>
+            
+           
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Probleme
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="probrez.html">Probleme Rezolvate</a> 
+                <a href="probpros.html">Probleme Propuse</a>
+              </div>
+            </div>
+        </div>
+        <br>
+        <div class="title1"><h1>Probleme Rezolvate</h1></div>
+
+          <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Problema1')">Problema 1</button>
+            <button class="tablinks" onclick="openCity(event, 'Problema2')">Problema 2</button>
+            <button class="tablinks" onclick="openCity(event, 'Problema3')">Problema 3</button>
+            <button class="tablinks" onclick="openCity(event, 'Problema4')">Problema 4</button>
+            <button class="tablinks" onclick="openCity(event, 'Problema5')">Problema 5</button>
+          </div>
+          
+          <div id="Problema1" class="tabcontent">
+           <div class=def>         <font color="#86c232">    <p><h1>Cerinţa</h1></font>
+
+              <h3><p>Se consideră două mulţimi nevide <code>A</code> şi <code>B</code>, cu proprietatea că formează o partiție a mulțimii <code>{1,2,...,n}. </code>Să se construiască un graf bipartit complet cu <code>n</code> vârfuri, bipartit peste partiţia formată din mulțimile <code>A</code> și <code>B</code>.</p></h3>
+              
+              <font color="#86c232"><h1>Date de intrare</h1></font>
+              
+              <h3><p>Fişierul de intrare <code>bipartitcomplet.in</code> conţine pe prima linie numărul <code>n</code>. Urmează un număr <code>k</code>, apoi <code>k</code> numere naturale distincte cuprinse între <code>1</code> și <code>n</code>, reprezentând vârfurile din <code>A</code>. Mulțimea <code>B</code> conține toate numerele naturale cuprinse între <code>1</code> și <code>n</code> care nu sunt în <code>A</code>.</p></h3>
+              
+              
+              <font color="#86c232"><h1>Date de ieşire</h1></font>
+              
+              <h3><p>Fişierul de ieşire <code>bipartitcomplet.out</code> va conţine matricea de adiacență a grafului construit, câte o linie a matricei pe o linie a fișierului, elementele de pe o linie fiind separate prin exact un spațiu.</p></h3>
+              
+              <font color="#86c232"><h1>Restricţii şi precizări</h1></font>
+              
+              <ul>
+                <h3><li><code>1 &lt; k  &lt; n ≤ 100</code></li></h3>
+              </ul></p>
+              <h1><a href="C:\Users\ASUS\Desktop\Grafuri neorientate\problema1\main.cpp">Rezolvare</a></h1></div>
+          
+          
+            </div>
+          
+          <div id="Problema2" class="tabcontent">
+            <div class="def"> <font color="#86c232"><h1>Cerinţa</h1></font>
+            <h3> <p> Se dă un graf neorientat cu n (n<=100) vârfuri si m muchii prin lista muchiilor. Afisați toate subgrafurile pe care le are. Fiecare subgraf va fi afișat astfel:
+              - vârfurile lui
+              - matricea de adiacență</p></h3>
+              <h1><a href="C:\Users\ASUS\Desktop\Grafuri neorientate\problema2\main.cpp">Rezolvare</a></h1></div>
+          </div>
+          
+          <div id="Problema3" class="tabcontent">
+            <div class="def"> <font color="#86c232"><h1>Cerinţa</h1></font>
+            <h3><p>Se dau două grafuri neorientate G1 și G2 cu n (n<=100) vârfuri și m1, respectiv m2 muchii prin listele muchiilor, în două fișiere graf1.in, respectiv graf2.in. Verificați dacă unul dintre ele este graf parțial al celuilalt. Se va preciza dacă G1 este graf parțial al lui G2, dacă G2 este graf parțial al lui G1 sau NU dacă niciunul dintre ele este graf parțial al celuilalt.</p>
+            </h3><h1><a href="C:\Users\ASUS\Desktop\Grafuri neorientate\problema3\main.cpp">Rezolvare</a></h1></div>
+          </div>
+          <div id="Problema4" class="tabcontent">
+            <div class="def"><font color="#86c232"><h1>Cerinţa</h1></font>
+            <h3><p>Se da un graf neorientat cu n varfuri si m muchii. Determinati numarul minim de culori cu care se pot colora varfurile grafului astfel incat oricare doua varfuri adiacente sa aiba culori diferite. Numerotand apoi culorile necesare, realizati o colorare a varfurilor grafului dat si afisati pentru fiecare culoare nodurile care se coloreaza cu ea.</p>
+           </h3> <h1><a href="C:\Users\ASUS\Desktop\Grafuri neorientate\problema4\main.cpp">Rezolvare</a></h1>
+          </div> </div>
+          <div id="Problema5" class="tabcontent">
+            <div class="def"><font color="#86c232"><h1>Cerinţa</h1></font>
+           <h3><p>Se da un graf neorientat cu n noduri si m muchii precizat prin lista muchiilor. Calculati distantele minime de la un nod citit s la toate celelalte noduri ale grafului. Distanta minima dintre doua varfuri este egala cu lungimea celui mai scurt lant care are cele doua noduri ca extremitati.</p>
+           </h3><h1><a href="C:\Users\ASUS\Desktop\Grafuri neorientate\problema5\main.cpp">Rezolvare</a></h1>
+          </div>
+          <script>
+          function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+          </script>
+          
+  
+</body>
+</html>

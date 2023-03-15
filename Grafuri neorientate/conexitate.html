@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+        <script src=
+                    "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+                    </script>
+    </head>
+    <body bgcolor="#222629">
+        <!--------Navbar--------->
+
+        <div class="navbar">
+            <a href="grafneorientat.html">Home</a>
+            <a href="istoric.html">Istoric</a>
+            <a href="aplicatii.html">Aplicații</a>
+            <div class="dropdown">
+              <button class="dropbtn">Teorie
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="definitii.html">Definiție</a> 
+                <a href="reprezentare.html">Reprezentare</a>
+                <a href="tip.html">Tipuri de grafuri</a>
+                <a href="conexitate.html">Conexitate</a> 
+                <a href="parcurgere.html">Parcurgere</a>
+                <a href="gafh.html">Graf hemiltonian</a>
+                <a href="grafe.html">Graf eulerian</a>
+              </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Probleme
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="probrez.html">Probleme Rezolvate</a> 
+                  <a href="probpros.html">Probleme Propuse</a>
+                </div>
+              </div>
+          </div>
+          <div class="title1"><h1>
+            Lanț, ciclu</h1></div>
+            <div class="def"><h3>
+
+
+                <p><font color="#86c232">&#9733;Definiție.</font> Se numește <font color="#86c232">lanț</font> o succesiune de vârfuri \( L = \left[ x_1, x_2, \cdots x_k \right] \) cu proprietatea că oricare două vârfuri consecutive sunt adiacente.</p>
+
+	<p>Vârfurile <code>x</code><sub><code>1</code></sub> şi <code>x</code><sub><code>k</code></sub> se numesc extremitățile lanțului. Numărul <code>k-1</code> se numește lungimea lanțului și este numărul de muchii din care este format.</p>
+
+	<p>Lanțul care conține numai vârfuri distincte, două câte două, este lanț <font color="#86c232">elementar</font>.</p>
+
+	<p>Lanțul care conține numai muchii distincte este <font color="#86c232">lanț simplu</font>. Dacă muchiile unui lanț nu sunt distincte se numește <font color="#86c232">lanț compus</font>.</p>
+
+	<p><font color="#86c232">&#9733;Definiție.</font> Se numește <font color="#86c232">ciclu</font> un lanț simplu în care primul vârf este identic cu ultimul. Dacă toate vârfurile sunt distincte, mai puțin primul și ultimul, se numește <font color="#86c232">ciclu elementar</font>.</p>
+
+	<p><font color="#86c232">&#9733;Lungimea unui ciclu</font> este egală cu numărul de muchii din ciclu. Lungimea minimă a unui ciclu este <code>3</code>.</p>
+
+	<p>Un ciclu se numește <font color="#86c232">par</font> dacă lungimea sa este pară, respectiv <font color="#86c232">impar</font> în caz contrar.</p>
+
+	<p>Un graf neorientat care nu conține niciun ciclu se numește <font color="#86c232">aciclic</font>.</p>
+
+	<p><font color="#86c232">&#9733;Exemplu:</font> În graful de mai jos:</p>
+
+	<p><div class="imagine"><img src="graf-neorientat-3.png" alt="" width="386" height="180" /></div></p>
+
+	<ul>
+		<li>\( [2,4,1,3,5,7] \) este un lanț elementar</li>
+		<li>\( [3,5,7,6,5,1] \) este un lanț neelementar, dar simplu</li>
+		<li>\( [2,3,5,7,6,5,3,1] \) este un lanț compus</li>
+		<li>\( [1,5,3,2,4,1] \) este un ciclu elementar</li>
+		<li>\( [1,3,5,7,6,5,1] \) este un ciclu neelementar</li>
+	</ul>
+                </h3></div>
+
+                <div class="title1"><h1>
+                    Graf conex. Componente conexe</h1></div>
+                    <div class="def"><h3>
+
+                        <p><font color="#86c232">&#9733;Definiție.</font> Un graf neorientat se numește <font color="#86c232">graf conex</font> dacă pentru oricare două vârfuri <code>x</code> și <code>y</code> diferite ale sale, există cel puțin un lanț care le leagă, adică <code>x</code> este extremitatea inițială și <code>y</code> este extremitatea finală.</p>
+
+	<p>Un graf cu un singur nod este, prin definiție, conex.</p>
+
+	<p><font color="#86c232">&#9733;Definiție.</font> Se numește <font color="#86c232">componentă conexă</font> a unui graf <code>G=(X,U)</code> un subgraf <code>H=(Y, V)</code>, conex, al lui <code>G</code><br />
+care are proprietatea că nu există nici un lanț în G care să lege un vârf din <code>Y</code> cu un vârf din <code>X – Y</code>. </p>
+
+	<p>Subgraful <code>H</code> este conex și maximal cu această proprietate (dacă s-ar mai adăuga un vârf nu ar mai fi conex.)</p>
+
+	<p>Un graf este conex dacă admite o singură componentă conexă.</p>
+
+	<p><font color="#86c232">&#9733;Exemplu:</font></p>
+
+	<p>Graful următor este conex:</p>
+
+	<p><div class="imagine"><img src="graf-neorientat-3.png" alt="" width="386" height="180" /></div></p>
+
+	<p>Graful următor nu este conex și are <code>4</code> componente conexe.</p>
+
+	<p><div class="imagine"><img src="graf-neorientat-0.png" alt="" width="496" height="239" /></div></p>
+
+	<p><font color="#86c232">&#9733;Definiție.</font> Un graf este <font color="#86c232">biconex</font> dacă este conex şi pentru orice vârf eliminat subgraful generat îşi păstrează proprietatea de conexitate.</p>
+                        </h3></div>
+        
+        </body></html>

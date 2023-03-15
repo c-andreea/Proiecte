@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body bgcolor="#222629">
+        <!--------Navbar--------->
+
+        <div class="navbar">
+          <a href="grafneorientat.html">Home</a>
+          <a href="istoric.html">Istoric</a>
+          <a href="aplicatii.html">Aplicații</a>
+          <div class="dropdown">
+            <button class="dropbtn">Teorie
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="definitii.html">Definiție</a> 
+              <a href="reprezentare.html">Reprezentare</a>
+              <a href="tip.html">Tipuri de grafuri</a>
+              <a href="conexitate.html">Conexitate</a> 
+              <a href="parcurgere.html">Parcurgere</a>
+              <a href="gafh.html">Graf hemiltonian</a>
+              <a href="grafe.html">Graf eulerian</a>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Probleme
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="probrez.html">Probleme Rezolvate</a> 
+                <a href="probpros.html">Probleme Propuse</a>
+              </div>
+            </div>
+        </div>
+        <div class="title1"><h1>Parcurgerea în adâncime</h1></div>
+        <div class="def"><h3><p> &#9733;Parcurgerea în adâncime reprezintă explorarea &#8220;naturală&#8221; a unui graf neorientat. Este foarte asemănătoare cu modul în care un turist vizitează un oraș în care sunt obiective turistice (vârfurile grafului) și căi de acces între obiective (muchiile). Vizitarea orașului va avea loc din aproape în aproape: se pleacă de la un obiectiv de pornire, se continuă cu un obiectiv învecinat cu acesta, apoi unul învecinat cu al doilea, etc. </p>
+
+	<p><font color="#86c232"> &#9733;Parcurgerea în adâncime se face astfel:</font></p>
+
+	<ul style="list-style-type:none;">
+		<li>&#8594;Se începe cu un vârf inițial <code></code>x</code>, care este în acest moment <strong>vârf curent</strong>.</li>
+		<li>&#8594;Vârful <code></code>x</code> se vizitează. Se determină primul său vecin nevizitat <code></code>y</code> al lui <code></code>x</code>, care devine vârf curent.</li>
+		<li>&#8594;Apoi se vizitează primul vecin nevizitat al lui <code></code>y</code>, şi aşa mai departe, mergând în adâncime, până când ajungem la un vârf care nu mai are vecini nevizitați. Când ajungem într-un astfel de vârf, ne întoarcem la &#8220;părintele&#8221; acestuia &#8211; vârful din care am ajuns în acesta.</li>
+		<li>&#8594;Dacă acest vârf mai are vecini nevizitați, alegem următorul vecin nevizitat al său și continuam parcurgerea în același mod.</li>
+		<li>&#8594;Dacă nici acest vârf nu mai are vecini nevizitați, revenim în vârful său părinte și continuăm în același mod, până când toate vârfurile accesibile din vârful de start sunt vizitate.</li>
+	</ul>
+
+	<p><font color="#86c232"> &#9733;Observație</font></p>
+
+	<p>Dacă graful nu este conex, nu ser vor vizita toate vârfurile.</p>
+
+  <h3><font color="#86c232"> &#9733;Exemplu</font></h3></h3>
+  <tabel
+  ><tr>
+          <td>  <img src="parc.in.ad.gif" alt="" width="352" height="439"></td>
+          <td><div class="def1"><h3>Parcurgerea din nodul 3 : 1 2 6 5 4 7</h3></div></td>
+         </tr> 
+        </tabel>
+        <h3><p><a href="https://www.cs.usfca.edu/~galles/visualization/DFS.html"> &#9733;Animație configurabilă pentru parcurgerea DFS</a></p>
+        <p> &#9733;Pentru implementarea algoritmului se foloseşte un vector caracteristic pentru memorarea faptului că un anume vârf a fost sau nu vizitat, la un anumit moment al parcurgerii:</p>
+
+        <ul style="list-style-type:none;">
+          <li>&#8594;<code>v[i] = 0</code>, vârful <code>i</code> nu a fost (încă) vizitat</li>
+          <li>&#8594;<code>v[i] = 1</code>, vârful <code>i</code> a fost vizitat</li>
+        </ul>
+      
+        <p> &#9733;Pentru a determina ordinea în care se parcurg nodurile care pot fi vizitate, se folosește o stivă: </p>
+      
+        <ul style="list-style-type:none;">
+          <li>&#8594;se analizează mereu nodurile adiacent cu nodul din vârful stivei</li>
+          <li>&#8594;dacă pentru nodul din vârful stivei găsim un vecin nevizitat, adăugăm nodul vecin pe stivă</li>
+          <li>&#8594;dacă pentru nodul din vârful stivei nu mai găsim niciun vecin nevizitat, îl eliminăm de pe stivă</li>
+        </ul>
+      
+        <p>Pentru implementare se poate folosi ca stivă memoria STACK, prin intermediul recursivității.</p>
+        <font color="#86c232"> &#9733;Implementare C++</font>
+        <p>Presupunem că graful are <code>n</code> noduri și este prezentat prin matricea de adiacență <code>a</code>. Starea unui vârf (vizitat sau nu) este memorată în vectorul caracteristic <code>v</code>. Toate aceste variabile sunt globale.</p>
+
+<pre >void dfs(int k)
+{
+  v[k]=1; //vizitam varful curent x
+  for(int i=1;i&lt;=n;i++) // determinam vecinii nevizitati ai lui x
+    if(a[k][i]==1 &amp;&amp; v[i]==0)
+    {
+      dfs(i); // continuam parcurgerea cu vecinul curent i
+    }
+}
+</pre> </h3>
+      </div>
+      <div class="title1"><h1>Parcurgerea în lățime     </h1></div>
+      <div class="def"><h3><p> &#9733;Se parcurge vârful de start, apoi vecinii acestuia, apoi vecinii nevizitați ai acestora, etc, până când sunt vizitate toate vârfurile accesibile. Practic, pentru a stabili ordinea de vizitare se folosește o coadă, iar pentru a stabili dacă un vârf a fost sau nu vizitat se foloseşte un vector caracteristic.</p>
+
+        <p> &#9733;Algoritmul este:</p>
+      
+        <ul style="list-style-type:none;">
+          <li>&#8594;adaugăm în coadă vârful inițial și îl vizităm</li>
+          <li>&#8594;cât timp coada este nevidă
+        <ul style="list-style-type:none;">
+          <li>&#8594;extragem un element din coadă</li>
+          <li>&#8594;determinăm vecinii nevizitați ai vârfului extras, îi vizităm și îi adăugăm în coadă</li>
+          <li>&#8594;eliminăm elementul din coadă</li>
+        </ul></li>
+        </ul>
+      
+        <p><font color="#86c232"> &#9733;Observație</font></p>
+      
+       <h3> <p>Dacă graful nu este conex, în urma parcurgerii nu se vor vizita toate vârfurile.</p></h3>
+      
+       <h3><font color="#86c232"> &#9733;Exemplu</font></h3>
+      
+        <p><img src="parc.in.lat.gif" alt="" width="352" height="439"></p>
+      
+       <h3><p>Vârfurile grafului au fost parcurse în ordinea:3 1 2 4 5 6 7</code>.</p></h3> 
+      
+       <h3> <p><a href="https://www.cs.usfca.edu/~galles/visualization/BFS.html"> &#9733;Animație configurabilă pentru parcurgerea <span class="caps">BFS</span>!</a></p>
+        <font color="#86c232"> &#9733;Implementare C++</font>
+        <p>Funcţia de mai jos presupune că un graf cu <code>n</code> vârfuri este memorat prin intermediul matricei de adiacenţă, vectorul <code>x[]</code> reprezintă coada, vectorul <code>v[]</code>, aceste variabile fiind declarate global. Funcţia returnează numărul de elemente care au fost vizitate.</p>
+
+        <pre >int bfs(int start)
+        {
+          int i,k,st,dr;
+          //initializez coada
+          st=dr=1;
+          x[1]=start;
+          v[start]=1;//vizitez varful initial
+          while(st&lt;=dr)//cat timp coada nu este vida
+          {
+            k=x[st];//preiau un element din coada
+            for(i=1;i&lt;=n;i++)//parcurg varfurile
+              if(v[i]==0 &amp;&amp; a[k][i]==1)//daca i este vecin cu k si nu este vizitat
+              {
+                v[i]=1;//il vizitez
+                x[++dr]=i;//il adaug in coada
+              }
+            st++;//sterg din coada
+          }
+          return dr;//returnam numarul de varfuri vizitate
+        }
+        </pre></h3>			
+      </h3></div>
+</body>
+</html>

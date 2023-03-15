@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body bgcolor="#222629">
+        <!--------Navbar--------->
+
+        <div class="navbar">
+          <a href="grafneorientat.html">Home</a>
+          <a href="istoric.html">Istoric</a>
+          <a href="aplicatii.html">Aplicații</a>
+          <div class="dropdown">
+            <button class="dropbtn">Teorie
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="definitii.html">Definiție</a> 
+              <a href="reprezentare.html">Reprezentare</a>
+              <a href="tip.html">Tipuri de grafuri</a>
+              <a href="conexitate.html">Conexitate</a> 
+              <a href="parcurgere.html">Parcurgere</a>
+              <a href="gafh.html">Graf hemiltonian</a>
+              <a href="grafe.html">Graf eulerian</a>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Probleme
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="probrez.html">Probleme Rezolvate</a> 
+                <a href="probpros.html">Probleme Propuse</a>
+              </div>
+            </div>
+        </div>
+        <div class="title1"><h1>
+          Graf eulerian</h1></div>
+        <div class="def"><h3>
+         
+
+	<p><font color="#86c232"> &#9733;Definiție.</font> Se numește <font color="#86c232">graf eulerian</font> un graf care conține un ciclu eulerian. Se numește <font color="#86c232">ciclu eulerian</font> un ciclu care conține toate muchiile grafului.</p>
+
+	<p><font color="#86c232"> &#9733;Exemplu:</font> Graful următor este eulerian. Un ciclu eulerian este: \( [1,4,2,1,3,2,7,3,5,7,6,5,1] \)</p>
+
+<div class="imagine">	<p><img src="graf-euler.png" alt="" width="439" height="199" /></p></div>
+
+	<p><font color="#86c232"> &#9733;Teoremă:</font> Un graf <code>G = (X,U)</code>, fără vârfuri izolate, este eulerian dacă şi numai dacă este conex şi<br />
+gradele tuturor vârfurilor sale sunt numere pare.</p>	
+
+<p> &#9733;Pentru determinarea unui ciclu eulerian se pot folos mai mulți algoritmi. Unul dintre aceștia este asemănător cu parcurgerea în adâncime. Vom folosi o stivă (eventual memoria <span class="caps">STACK</span> prin intermediul recursivității)</p>
+
+<ul style="list-style-type:none;">
+  <li>&#8594;adăugăm pe stivă un vârf oarecare &#8211; de exemplu <code>1</code>;</li>
+  <li>&#8594;cât timp stiva nu este vidă
+<ul style="list-style-type:none;">
+  <li>&#8594;fie <code>k</code> &#8211; nodul din vârful stivei</li>
+  <li>&#8594;determinăm nodurile <code>x</code> adiacente cu <code>k</code>. Eliminăm muchia <code>[k,x]</code> și adăugăm nodul <code>x</code> pe stivă (apel recursiv)
+<ul style="list-style-type:none;">
+  <li>&#8594;continuăm cu nodul situat în vârful stivei</li>
+</ul></li>
+  <li>&#8594;adăugăm nodul <code>k</code> într-o listă</li>
+  <li>&#8594;eliminăm nodul <code>k</code> din stivă</li>
+</ul></li>
+  <li>&#8594;lista construită reprezintă ciclu eulerian</li>
+</ul>
+
+<p><font color="#86c232"> &#9733;Important:</font> </p>
+
+<ul style="list-style-type:none;">
+  <li>&#8594;la vizitarea unui vârf, acesta nu va fi marcat, pentru a permite revenirea în el;</li>
+  <li>&#8594;finitudinea algoritmului este asigurată de faptul că muchiile se elimină din graf;</li>
+</ul>
+
+<p><font color="#86c232"> &#9733;Secvență C++:</font></p>
+
+<p>Considerăm un graf cu <code>n</code> vârfuri, memorat prin intermediul matricei de adiacență, <code>A[][]</code>. Tabloul <code>L[]</code> reprezintă lista în care se memorează ciclul eulerian. Toate variabilele sunt globale:</p>
+
+<pre >void Euler(int k)
+{
+for(int i = 1 ; i &lt;= n ; i ++)
+  if(A[k][i] == 1)
+  {
+    A[k][i] = A[i][k] = 0;
+    Euler(i);
+  }
+L[++p] = k;
+}
+...
+Euler(1);
+...
+</pre>
+
+<p> &#9733;Algoritmul de mai sus poate fi utilizat și pentru determinarea unui lanț eulerian. Parcurgerea trebuie să înceapă însă din unul dintre vârfurile cu grad impar.</p>
+
+
+
+
+</h3></div>
+</body>
+</html>

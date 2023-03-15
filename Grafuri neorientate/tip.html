@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+        <script src=
+                    "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+                    </script>
+    </head>
+    <body bgcolor="#222629">
+        <!--------Navbar--------->
+
+        <div class="navbar">
+          <a href="grafneorientat.html">Home</a>
+          <a href="istoric.html">Istoric</a>
+          <a href="aplicatii.html">Aplicații</a>
+          <div class="dropdown">
+            <button class="dropbtn">Teorie
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="definitii.html">Definiție</a> 
+              <a href="reprezentare.html">Reprezentare</a>
+              <a href="tip.html">Tipuri de grafuri</a>
+              <a href="conexitate.html">Conexitate</a> 
+              <a href="parcurgere.html">Parcurgere</a>
+              <a href="gafh.html">Graf hemiltonian</a>
+              <a href="grafe.html">Graf eulerian</a>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Probleme
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="probrez.html">Probleme Rezolvate</a> 
+                <a href="probpros.html">Probleme Propuse</a>
+              </div>
+            </div>
+        </div>
+         
+          <div class="title1"><h1>
+            Graf parțial. Subgraf. Graf complementar</h1></div>
+            <div class="def"><h3>
+              <p><font color="#86c232">&#9733;Definiție.</font> Fie <code>G=(X, U)</code> un graf neorientat. Se numeşte <font color="#86c232">graf parțial</font> al grafului <code>G</code>, graful neorientat <code>G1=(X, U1)</code>, unde <code>U1 ⊆ U</code>.</p>
+
+              <p>Din definiție rezultă: </p>
+            
+              <ul style="list-style-type:none;">
+                <li>&#8594;Un graf parțial al unui graf neorientat <code>G=(V,U)</code>, are aceeaşi mulțime de vârfuri ca şi <code>G</code>, iar mulțimea muchiilor este o submulțime a lui <code>U</code> sau chiar <code>U</code>.</li>
+                <li>&#8594;Fie <code>G=(X, U)</code> un graf neorientat. Un graf parțial al grafului <code>G</code> se obține păstrând vârfurile şi<br />
+            eliminând eventual nişte muchii (se pot elimina şi toate muchiile sau chiar nici una).</li>
+              </ul>
+            
+              <p><font color="#86c232">&#9733;Definiție.</font> Fie <code>G=(X, U)</code> un graf orientat. Se numeşte <font color="#86c232">subgraf</font> al grafului <code>G</code> graful neorientat <code>G1=(X1,U1)</code> unde <code>X1 ⊆ X</code> iar <code>U1</code> conține toate arcele din <code>U</code> care au extremitățile în <code>X1</code>.</p>
+            
+              <p>Din definiție rezultă: </p>
+            
+              <ul style="list-style-type:none;">
+                <li>&#8594;Fie <code>G=(X,U)</code> un graf orientat. Un subgraf al grafului <code>G</code>, se obține ştergând eventual anumite<br />
+            vârfuri şi odată cu acestea şi muchiile care le admit ca extremitate (nu se pot şterge toate vârfurile deoarece s-ar obține un graf cu mulțimea vârfurilor vidă).</li>
+              </ul>
+            
+              <p><font color="#86c232">&#9733;Definiție.</font> Fie <code>G=(X, U)</code> un graf neorientat. Se numeşte <font color="#86c232">graf complementar</font> al grafului <code>G</code>, graful neorientat <code>G1=(X, U1)</code>, cu proprietatea că două vârfuri <code>x</code> și <code>y</code> sunt adiacente în <code>G1</code> dacă și numai dacă nu sunt adiacente în <code>G</code>.</p>
+            
+              <p><font color="#86c232">&#9733;Exemplu:</font> </p>
+            
+              <table class="table">
+                <tr>
+                  <td style="vertical-align:middle;" class="col-md-3"><font color="white">Graful inițial </font></td>
+                  <td style="vertical-align:middle;" class="col-md-3"><font color="white">Graf parțial</font> </td>
+                  <td style="vertical-align:middle;" class="col-md-3"><font color="white">Subgraf </font></td>
+                  <td style="vertical-align:middle;" class="col-md-3"><font color="white">Graf complementar </font></td>
+                </tr>
+                <tr>
+                  <td> <div class="imagine"><img src="graf-initial.png" alt="" width="252" height="239" /></div> </td>
+                  <td><div class="imagine"> <img src="graf-partial.png" alt="" width="252" height="239" /></div> </td>
+                  <td><div class="imagine"> <img src="subgraf.png" alt="" width="252" height="159" /></div> </td>
+                  <td><div class="imagine"> <img src="graf-neorientat-2-complementar.png" alt="" /></div> </td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td class="def">S-au eliminat muchiile <code>[1,2]</code>, <code>[3,1]</code> </td>
+                  <td class="def">S-a eliminat vârfurile <code>3 5</code> și toate muchiile incidente cu ele. </td>
+                  <td class="def">O muchie <code>[x,y]</code> apare în graful complementar dacă și numai dacă nu apare în graful inițial. </td>
+                </tr>
+              </table>
+            
+              <p><font color="#86c232">&#9733;Observații.</font> Un graf neorientat oarecare poate avea mai multe grafuri parțiale și subgrafuri, dar un unic graf complementar. Mai precis:</p>
+            
+              <p><font color="#86c232">&#9733;Teoremă:</font>  Fie <code>G</code> un graf neorientat cu <code>n</code> vârfuri și <code>m</code> muchii. Atunci:</p>
+            
+              <ul style="list-style-type:none;">
+                <li>&#8594;graful <code>G</code> admite \( 2 ^ m \) grafuri parțiale;</li>
+                <li>&#8594;graful <code>G</code> admite \( 2 ^ n &#8211; 1 \) subgrafuri;</li>
+                <li>&#8594;graful <code>G</code> admite un unic graf complementar.</li>
+              </ul>
+            
+              <p>Justificare:</p>
+            
+              <p>Să ne amintim că o mulțime cu <code>a</code> elemente are \( 2 ^ a \) submulțimi, inclusiv mulțimea vidă și mulțimea inițială. Atunci:</p>
+            
+              <ul style="list-style-type:none;">
+                <li>&#8594;orice submulțime a mulțimii muchiilor induce un graf parțial. Sunt <code>m</code> muchii, deci \( 2 ^ m \) submulțimi, deci \( 2 ^ m \) grafuri parțiale.</li>
+                <li>&#8594;orice submulțime a mulțimii vârfuri induce un subgraf, mai puțin mulțimea vidă &#8211; un graf nu poate avea <code>0</code> vârfuri. Similar ca mai sus, sunt \( 2^n &#8211; 1 \) subgrafuri.</li>
+                <li>&#8594;graful complementar este unic determinat, deoarece complementara unei submulțimi față de o mulțime dată este unic determinată.</li>
+              </ul>
+             
+            
+              
+            
+            </h3></div>
+            <div class="title1"><h1>
+              Graf nul. Graf complet. Graf regulat. Graf bipartit</h1></div>
+              <div class="def"><h3>
+                <p><font color="#86c232">&#9733;Definiție.</font> Un graf neorientat se numește <strong>graf nul</strong> dacă mulțimea muchiilor este vidă. </p>
+
+	<p>Într-un graf nul toate vârfurile sunt izolate.</p>
+
+	<p><font color="#86c232">&#9733;Definiție.</font> Fie <code>G=(X, U)</code> un graf neorientat. Graful <code>G</code> se numește <strong>graf complet</strong> dacă oricare două vârfuri<br />
+distincte ale sale sunt adiacente. Un graf complet cu <code>n</code> vârfuri se notează <code>K</code><sub><code>n</code></sub>.</p>
+
+	<p><font color="#86c232"&#9733;>Exemplu:</font> Graful următor este graful <code>K</code><sub><code>5</code></sub>.</p>
+
+	<p><div class="imagine"><img src="graf-neorientat-complet.png" alt="" width="237" height="181" /></div></p>
+
+	<p>Într-un graf complet cu <code>n</code> vârfuri sunt \( C_n ^2 = { {n*(n-1)} \over 2 } \) muchii și fiecare vârf are gradul <code>n-1</code>.</p>
+
+	<p><font color="#86c232">&#9733;Propoziție:</font> Sunt \( 2 ^ {{n*(n-1)} \over 2} \) grafuri neorientate distincte cu <code>n</code> vârfuri.</p>
+
+	<p><font color="#86c232">&#9733;Definiție.</font> Un graf în care toate nodurile au acelaşi grad se numește <strong>graf regulat</strong>.</p>
+
+	<p><font color="#86c232">&#9733;Exemplu:</font>Graful de mai jos este regulat.</p>
+
+	<p><div class="imagine"><img src="graf-regulat.png" alt="" width="248" height="166" /></div></p>
+
+	<p><font color="#86c232">&#9733;Definiție.</font> Un graf <code>G=(X, U)</code> se numește <strong>graf bipartit</strong> dacă există două mulţimi nevide <code>A</code> și <code>B</code> astfel încât <code>X=A ∪ B</code>, <code>A ∩ B = ∅</code> şi orice muchie <code>u</code> a lui <code>G</code> are o extremitate în <code>A</code> iar cealaltă în <code>B</code>. Mulţimile <code>A</code> şi <code>B</code> formează o partiţie a lui <code>X</code>.</p>
+
+	<p><font color="#86c232">&#9733;Exemplu:</font> Graful următor este bipartit. <code>A={1,2,5,7}</code> și <code>B={3,4,6}</code>.</p>
+
+	<p><div class="imagine"><img src="graf-bipartit.png" alt="" width="312" height="139" /></div></p>
+
+	<p><font color="#86c232">&#9733;Definiție.</font> Un graf bipartit <code>G=(X,U)</code> se numește <strong>bipartit complet</strong> dacă pentru oricare două vârfuri \( x \in A\) și \( y \in B \), există în graf muchia <code>[x,y]</code>; adică \( [x,y] \in U \).</p>
+
+	<p><font color="#86c232">&#9733;Exemplu:</font> Graful următor este bipartit complet.</p>
+
+	<p><div class="imagine"><img src="graf-bipartit-complet.png" alt="" width="312" height="139" /></div></p>
+              
+              </h3></div>
+</body>
+</html>

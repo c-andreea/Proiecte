@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+      
+    
+    </head>
+    <body bgcolor="#222629">
+        <!--------Navbar--------->
+
+        <div class="navbar">
+          <a href="grafneorientat.html">Home</a>
+          <a href="istoric.html">Istoric</a>
+          <a href="aplicatii.html">Aplicații</a>
+          <div class="dropdown">
+            <button class="dropbtn">Teorie
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="definitii.html">Definiție</a> 
+              <a href="reprezentare.html">Reprezentare</a>
+              <a href="tip.html">Tipuri de grafuri</a>
+              <a href="conexitate.html">Conexitate</a> 
+              <a href="parcurgere.html">Parcurgere</a>
+              <a href="gafh.html">Graf hemiltonian</a>
+              <a href="grafe.html">Graf eulerian</a>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Probleme
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="probrez.html">Probleme Rezolvate</a> 
+                <a href="probpros.html">Probleme Propuse</a>
+              </div>
+            </div>
+        </div> 
+          <div class="title1"><h1>
+            Terminologie</h1></div>
+            <div class="def"><h3>
+              <font color="#86c232">&#9733;Definiție.</font>
+              <p> Se numește <font color="#86c232">graf neorientat</font> o pereche ordonată de mulțimi G=(X,U), unde:</p>
+
+
+
+<ul style="list-style-type:none;"><li> &#8594; X este o mulțime finită și nevidă de elemente numite<font color="#86c232"> vârfuri sau noduri</font>;</li>
+<li>&#8594; U este o mulțime finită de submulțimi cu două elemente din X, numite<font color="#86c232"> muchii.</font> </li></ul>
+
+
+<p>Vom nota în continuare vârfurile cu valori între 1 și n – unde n este număru de vârfuri din graf, iar muchiile cu [x,y] sau (x,y), unde x și y sunt vârfuri și se numesc <font color="#86c232">extremitățile muchiei</font>.</p>
+
+<p>Un <font color="#86c232">vecin</font> al unui vârf x este orice vârf y cu proprietatea că există muchia [x,y].</p>
+
+<p>Două vârfuri între care există muchie se numesc <font color="#86c232">adiacente.</font></p>
+
+<p>Două muchii sunt <font color="#86c232">incidente</font> dacă au o o extremitate comună. Un vârf este <font color="#86c232">incident</font> cu o muchie dacă vârful este extremitate a acelei muchii.</p>
+
+<p>Mulțimea muchiilor are proprietatea de simetrie: dacă [x,y] este muchie, atunci și [y,x] este muchie.</p>
+
+<p>&#9733; Conform definiției:</p>
+<ul style="list-style-type:none;"><li>&#8594; într-un graf neorientat nu există muchie de la un vârf la el însuși;</li>
+<li>&#8594; intre două vârfuri distincte există cel mult o muchie.</li>
+</ul>  
+<font color="#86c232">Exemplu:</font>
+<ul style="list-style-type:none;">
+  <li><code>X={1,2,3,4,5,6,7,8,9,10,11}</code></li>
+  <li><code>U={[1,4],[1,5],[2,3],[2,8],[3,11],[4,5],[4,9],[7,10],[8,11]}</code></li>
+</ul>
+<p><div class="imagine"><img src="grf-neor.png" alt="" width="548" height="266" /></div></p>
+
+
+
+
+</h3></div>
+<div class="title1"><h1>
+  Gradul unui vârf</h1></div>
+  <div class="def"><h3>
+    <font color="#86c232">&#9733;Definiție.</font>
+   <p>  Într-un graf neorientat se numește <font color="#86c232">grad</font> al unui vârf numărul de vârful adiacente cu acesta (sau numărul de muchii incidente cu acesta). Gradul unui vărf x se notează d(x) (degree).</p>
+  <p><font color="#86c232"> &#9733; Observații:</font></p>
+  <ul style="list-style-type:none;"><li>&#8594; un vârf cu gradul 0 se numește<font color="#86c232"> izolat</font>. În graful de mai sus, vârful 6 este izolat.</li>
+    <li>&#8594; un vârf cu gradul 1 se numește<font color="#86c232"> terminal</font>. În graful de mai sus, vârful 9 este vârf terminal.</li>
+    <li>&#8594; gradul maxim al unui vârf într-un graf cu n vârfuri este n-1</li></ul>
+    <p><font color="#86c232"> &#9733; Teoremă:</font> Într-un graf neorientat, suma gradelor tuturor vârfurilor este dublul numărului de muchii.</p>
+
+   <P> <font color="#86c232">&#9733; Consecințe:</font></P> 
+   <ul style="list-style-type:none;"><li> &#8594; Suma gradelor tuturor vârfurilor este număr par.</li>
+    <li> &#8594; Într-un graf neorientat, numărul de vârfuri de grad impar este întotdeauna par.</li>
+</ul>
+<br> <br> <br> <br> <br> <br> <br> <br> 
+  </h3></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

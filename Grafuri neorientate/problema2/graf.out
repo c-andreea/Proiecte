@@ -1,0 +1,35 @@
+Varfurile subgrafului: 1 
+Matricea de adiacenta:
+0 0 0 
+0 0 0 
+0 0 0 
+Varfurile subgrafului: 1 2 
+Matricea de adiacenta:
+0 1 0 
+1 0 0 
+0 0 0 
+Varfurile subgrafului: 1 2 3 
+Matricea de adiacenta:
+0 1 1 
+1 0 0 
+1 0 0 
+Varfurile subgrafului: 1 3 
+Matricea de adiacenta:
+0 0 1 
+0 0 0 
+1 0 0 
+Varfurile subgrafului: 2 
+Matricea de adiacenta:
+0 0 0 
+0 0 0 
+0 0 0 
+Varfurile subgrafului: 2 3 
+Matricea de adiacenta:
+0 0 0 
+0 0 0 
+0 0 0 
+Varfurile subgrafului: 3 
+Matricea de adiacenta:
+0 0 0 
+0 0 0 
+0 0 0 

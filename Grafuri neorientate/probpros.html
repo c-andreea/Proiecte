@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body bgcolor="#222629">
+        <!--------Navbar--------->
+
+        <div class="navbar">
+          <a href="grafneorientat.html">Home</a>
+          <a href="istoric.html">Istoric</a>
+          <a href="aplicatii.html">Aplicații</a>
+          <div class="dropdown">
+            <button class="dropbtn">Teorie
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="definitii.html">Definiție</a> 
+              <a href="reprezentare.html">Reprezentare</a>
+              <a href="tip.html">Tipuri de grafuri</a>
+              <a href="conexitate.html">Conexitate</a> 
+              <a href="parcurgere.html">Parcurgere</a>
+              <a href="gafh.html">Graf hemiltonian</a>
+              <a href="grafe.html">Graf eulerian</a>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Probleme
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="probrez.html">Probleme Rezolvate</a> 
+                <a href="probpros.html">Probleme Propuse</a>
+              </div>
+            </div>
+        </div>
+         
+<br>
+
+    <div class="title1"><h1>Probleme Propuse</h1></div>    
+
+
+
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Problema1')">Problema 1</button>
+          <button class="tablinks" onclick="openCity(event, 'Problema2')">Problema 2</button>
+          <button class="tablinks" onclick="openCity(event, 'Problema3')">Problema 3</button>
+          <button class="tablinks" onclick="openCity(event, 'Problema4')">Problema 4</button>
+          <button class="tablinks" onclick="openCity(event, 'Problema5')">Problema 5</button>
+        </div>
+        <div class="def">
+        <div id="Problema1" class="tabcontent">
+
+           <div class="def1">
+<font size="6" color="#86c232"><strong>Cerinţa</strong></font>
+          <h3><p>Se dă lista muchiilor unui graf neorientat. Să se afișeze vârfurile de grad maxim.</p></h3>
+        
+          <font size="6" color="#86c232"><strong> Date de intrare</strong></font>
+        
+         <h3><p>Fişierul de intrare <code>gradmax.in</code> conţine pe prima linie numărul <code>n</code>, reprezentând numărul de vârfuri ale grafului. Fiecare dintre următoarele linii conține câte o pereche de numere <code>i j</code>, cu semnificația că există muchie între <code>i</code> și <code>j</code>.</p></h3> 
+        
+         <font size="6" color="#86c232"><strong>Date de ieşire</strong></font>
+        
+          <h3><p>Fişierul de ieşire <code>gradmax.out</code> va conţine pe prima linie numărul <code>m</code> de vârfuri de grad maxim, urmat de cele <code>m</code> vârfuri de grad maxim ,în ordine crescătoare, separate prin exact un spațiu.</p></h3>
+        
+          <font size="6" color="#86c232"><strong>Restricţii şi precizări</strong></font>
+        
+<h3><ul>
+            <li><code>1 ≤ n ≤ 100</code></li>
+            <li><code>1 ≤ i , j ≤ n</code></li>
+            <li>muchiile se pot repeta în fișierul de intrare</li>
+          </ul></h3>
+</div>
+
+        </div>
+        
+        <div id="Problema2" class="tabcontent">
+          
+<div class="def1"><font size="6" color="#86c232"><strong>Cerinţa</strong></font> 
+
+         <h3><p>Se dă lista muchiilor unui graf neorientat cu <code>n</code> vârfuri, etichetate de la <code>1</code> la <code>n</code>. Din acest graf se elimină toate muchiile cu proprietatea că ambele extremități au aceeași paritate. Să se determine câte muchii va avea graful parțial obținut.</p></h3> 
+        
+          <font size="6" color="#86c232"><strong> Date de intrare</strong></font>
+        
+         <h3><p>Fişierul de intrare <code>graf_partial.in</code> conţine pe prima linie numărul <code>n</code>, reprezentând numărul de vârfuri ale grafului. Fiecare dintre următoarele linii conține câte o pereche de numere <code>i j</code>, cu semnificația că există muchie între <code>i</code> și <code>j</code>.</p></h3> 
+        
+          <font size="6" color="#86c232"><strong>Date de ieşire</strong></font>
+        
+         <h3><p>Fişierul de ieşire <code>graf_partial.out</code> va conţine pe prima linie numărul <code>M</code> de muchii ale grafului parțial obținut.</p></h3> 
+        
+         <font size="6" color="#86c232"><strong>Restricţii şi precizări</strong></font>
+        
+         <h3><ul>
+            <li><code>1 ≤ n ≤ 100</code></li>
+            <li><code>1 ≤ i , j ≤ n</code></li>
+            <li>muchiile se pot repeta în fișierul de intrare</li>
+          </ul></h3> 
+        
+        </div></div>
+      
+        <div id="Problema3" class="tabcontent">
+          <div class="def1"> <font size="6" color="#86c232"><strong>Cerinţa</strong></font>
+
+<h3>	<p>Se dă lista muchiilor unui graf neorientat. Să se afișeze matricea de adiacență a grafului.</p></h3>
+
+	<font size="6" color="#86c232"><strong> Date de intrare</strong></font>
+
+	<h3><p>Fişierul de intrare <code>adiacenta.in</code> conţine pe prima linie numerele <code>n</code> și <code>m</code>, reprezentând numărul de vârfuri ale grafului și numărul de muchii date în continuare. Fiecare dintre următoarele <code>m</code> linii conține câte o pereche de numere <code>i j</code>, cu semnificația că există muchie între <code>i</code> și <code>j</code>.</p></h3>
+
+	<font size="6" color="#86c232"><strong>Date de ieşire</strong></font>
+
+	<h3><p>Fişierul de ieşire <code>adiacenta.out</code> va conţine <code>n</code> linii, pe fiecare linie fiind câte <code>n</code> valori separate prin exact un spațiu, reprezentând matricea de adiacență a grafului dat.</p></h3>
+
+	<font size="6" color="#86c232"><strong>Restricţii şi precizări</strong></font>
+
+	<h3><ul>
+		<li><code>1 ≤ n ≤ 100</code></li>
+		<li><code>1 ≤ i , j ≤ n</code></li>
+		<li>muchiile se pot repeta în fișierul de intrare</li>
+	</ul></h3>
+        </div></div>
+
+        <div id="Problema4" class="tabcontent">
+          <div class="def1"> <font size="6" color="#86c232"><strong>Cerinţa</strong></font>
+
+	<h3><p>Se dă lista muchiilor unui graf neorientat cu <code>n</code> vârfuri, etichetate de la <code>1</code> la <code>n</code>. Din acest graf se elimină toate muchiile cu o extremitate de grad maxim și cealaltă extremitate de grad minim. Să se determine numărul de muchii eliminate și să se afișeze matricea de adiacență a grafului parțial obținut.</p></h3>
+
+	<font size="6" color="#86c232"><strong> Date de intrare</strong></font>
+
+	<h3><p>Fişierul de intrare <code>graf_partial_1.in</code> conţine pe prima linie numărul <code>n</code>, reprezentând numărul de vârfuri ale grafului. Fiecare dintre următoarele linii conține câte o pereche de numere <code>i j</code>, cu semnificația că există muchie între <code>i</code> și <code>j</code>.</p></h3>
+
+	<font size="6" color="#86c232"><strong>Date de ieşire</strong></font>
+
+	<h3><p>Fişierul de ieşire <code>graf_partial_1.out</code> va conţine pe prime linie numărul de muchii eliminate, iar pe următoarele linii  matricea de adiacență a grafului parțial obținut, câte o linie a matricei pe o linie a fișierului, elementele de pe fiecare linie fiind separate prin exact un spațiu.</p></h3>
+
+	<font size="6" color="#86c232"><strong>Restricţii şi precizări</strong></font>
+
+	<h3><ul>
+		<li><code>1 ≤ n ≤ 100</code></li>
+		<li><code>1 ≤ i , j ≤ n</code></li>
+		<li><strong>muchiile se pot repeta în fișierul de intrare</strong></li>
+	</ul></h3>
+
+
+        </div></div>
+        <div id="Problema5" class="tabcontent">
+          <font size="6" color="#86c232"><strong>Cerinţa</strong></font>
+
+	<h3><p>Se dă lista muchiilor unui graf neorientat cu <code>n</code> vârfuri, etichetate de la <code>1</code> la <code>n</code>. Să se verifice dacă graful este bipartit.</p>
+  </h3>
+	<font size="6" color="#86c232"><strong> Date de intrare</strong></font>
+
+	<h3><p>Fişierul de intrare <code>bipartit1.in</code> conţine pe prima linie numerele <code>n</code> și <code>m</code>, reprezentând numărul de vârfuri ale grafului și numărul de muchii. Fiecare dintre următoarele <code>m</code> linii conține câte o pereche de numere <code>i j</code>, cu semnificația că există muchie între <code>i</code> și <code>j</code>. </p></h3>
+
+	<font size="6" color="#86c232"><strong>Date de ieşire</strong></font>
+
+	<h3><p>Fişierul de ieşire <code>bipartit1.out</code> va conţine pe prima linie mesajul <code>DA</code>, dacă graful este bipartit, respectiv <code>NU</code> în caz contrar.</p></h3>
+
+<h3>	<p>Dacă mesajul este <code>DA</code>, următoarele două linii vor conţine două mulţimi care formează partiţia vârfurilor. Elementele fiecărei mulţimi vor fi afişate în ordine crescătoare, separate prin exact un spaţiu. Prima mulţime va fi cea care conţine vârful <code>1</code></p></h3>
+
+	<font size="6" color="#86c232"><strong>Restricţii şi precizări</strong></font>
+
+	<ul>
+		<li><code>1 &lt; n ≤ 15</code></li>
+		<li><code>1 ≤ i , j ≤ n</code></li>
+	</ul>
+        </div>
+      </div>
+
+        <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+        
+
+
+
+</body>
+</html>

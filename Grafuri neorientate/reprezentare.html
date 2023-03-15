@@ -1,0 +1,127 @@
+<html>
+    <head>
+   
+        <link rel="stylesheet" href="style1.css">
+        <script src=
+                    "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+                    </script>
+    </head>
+    <body bgcolor="#222629">
+        <!--------Navbar--------->
+<!----&#8594; sageata*/--> 
+<!---stea &#9733;-->
+        <div class="navbar">
+          <a href="grafneorientat.html">Home</a>
+          <a href="istoric.html">Istoric</a>
+          <a href="aplicatii.html">Aplicații</a>
+          <div class="dropdown">
+            <button class="dropbtn">Teorie
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="definitii.html">Definiție</a> 
+              <a href="reprezentare.html">Reprezentare</a>
+              <a href="tip.html">Tipuri de grafuri</a>
+              <a href="conexitate.html">Conexitate</a> 
+              <a href="parcurgere.html">Parcurgere</a>
+              <a href="gafh.html">Graf hemiltonian</a>
+              <a href="grafe.html">Graf eulerian</a>
+            </div>
+          </div>
+          <div class="dropdown">
+              <button class="dropbtn">Probleme
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="probrez.html">Probleme Rezolvate</a> 
+                <a href="probpros.html">Probleme Propuse</a>
+              </div>
+            </div>
+        </div>
+          <div class="title1"><h1>
+            Matricea de adiacență</h1></div>
+            <div class="def"><h3>
+<p > &#9733; Pentru un graf neorientat G=(X,U) cu n vârfuri, <font color="#86c232">matricea de adiacență</font>  este o matrice cu n linii și n coloane și elemente din {0,1}, cu:</p>
+
+&#8594;<font color="#86c232"> \( A_{i,j} = \left\{ \begin{array}{ll}
+ 1 &amp; \mbox{dacă } [i,j] \in U \\
+ 0 &amp; \mbox{dacă } [i,j] \notin U \end{array} \right. \)</font>
+
+ <table>
+  <tr>
+    <td> <img src="214202010117.png" alt="" height="350" width="250"> </td>
+    <td> <div class="def">\( A = \left( \begin{array}{ccccc}<br />
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\<br />
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\<br />
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\<br />
+1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\<br />
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\<br />
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\<br />
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\<br />
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\end{array} \right) \)</div></td> 
+  </tr>
+</table>
+<p><strong>&#9733;<font color="#86c232">Observații:</font> </strong></p>
+
+	<ul style="list-style-type:none;">
+		<li>&#8594;matricea de adiacență este simetrică față de diagonala principală;</li>
+		<li>&#8594;elementele de pe diagonala principală sunt <code>0</code>;</li>
+		<li>&#8594;gradul unui vârf <code>x</code> este egal cu numărul de elemente <code>1</code> de pe linia (sau coloana) <code>x</code>;</li>
+		<li>&#8594;suma tuturor elementelor din matricea de adiacență a unui graf neorientat este egală cu dublul numărului de muchii din graf.</li>
+	</ul>
+            </h3></div>
+            <div class="title1"><h1>
+              Lista de muchii</h1></div>
+              <div class="def"><h3>
+                <table>
+                <div class="def"> <tr>
+               <td><img src="214202010117.png" alt="" height="350" width="250">
+                 <td><font color="#6b6e70" size="4"> &#9733; <font color="#86c232">Lista de muchii</font> a unui graf neorientat reprezintă o mulțime ce conține toate muchiile din graf.
+
+                <p>&#9733; Pentru graful alăturat, lista de muchii este:</p> 
+              
+                \( U = \left\{ [1,2],[1,4],[2,3],[3,4],[4,5],[8,7] \right\} \)</font></td></tr></div></table>
+              
+                <p class="clear">&#9733;<font color="#86c232">Pentru reprezentarea în memorie putem folosi:</font> </p>
+              
+                <ul style="list-style-type:none;">
+                  <li>&#8594;un tablou unidimensional cu elemente de tip <code>struct {int I,J;}</code></li>
+                  <li>&#8594;două tablouri unidimensionale cu elemente de tip <code>int</code></li>
+                  <li>&#8594;o listă alocată dinamic</li>
+                  <li>&#8594;etc.</li>
+                </ul>
+          
+          
+              </h3></div>
+              <div class="title1"><h1>
+                Liste de adiacențe (de vecini)</h1></div>
+                <div class="def"><h3>
+                  <table>
+                    <div class="def"> <tr>
+                   <td><img src="214202010117.png" alt="" height="350" width="250">
+                     <td><font color="#6b6e70" size="4">&#9733; Pentru un graf neorientat cu <code>G=(X,U)</code> se va memora numărul de vârfuri <code>n</code> și apoi, pentru fiecare vârf <code>x</code>, lista vârfurilor adiacente cu <code>x</code>, adică a vârfurilor <code>y</code> cu proprietatea că există muchia <code>[x,y]</code>.</p>
+
+                      <p>&#9733; Pentru graful alăturat, <font color="#86c232">listele de adiacență</font> sunt:</p>
+                    
+                    <pre>
+              1: 2 4
+                    2: 1 3
+                    3: 2 4
+                    4: 1 5
+                    5: 4
+                    6: vidă
+                    7: 8
+                    8: 7
+                    </pre></font></td></tr></div></table>
+                    <p>&#9733; <font color="#86c232">La reprezentarea în memorie trebui avut în vedere că dimensiunile listelor de vecini sunt variabile. De aceea, este neeficientă utilizarea unor tablouri alocate static.</font> Astfel, putem folosi:</p>
+
+                    <ul style="list-style-type:none;">
+                      <li>&#8594;un șir de <code>n</code> tablouri unidimensionale alocate dinamic;</li>
+                      <li>&#8594;un șir de <code>n</code> vectori din <span class="caps">STL</span>;</li>
+                      <li>&#8594;un șir de <code>n</code> liste simplu (dublu) înlănțuite alocate dinamic.</li>
+                    </ul>
+
+</h3></div>
+<br><br><br><br>
+</body>
+</html>
