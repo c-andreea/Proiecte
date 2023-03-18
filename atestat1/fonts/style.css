@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Artica Pro';
+    src: local('Artica Pro Medium'), local('Artica-Pro-Medium'),
+        url('ArticaPro-Medium.woff2') format('woff2'),
+        url('ArticaPro-Medium.woff') format('woff'),
+        url('ArticaPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
