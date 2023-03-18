@@ -1,0 +1,666 @@
+<html>
+<head>
+<title>Dame</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+</head>
+<body>
+                <!--------Navbar--------->
+<section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="logo" href="#"><img src="regina.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ml-auto">
+   
+        <a class="nav-link" href="#problama">Problema Damelor</a>
+   
+      <li class="nav-item">
+        <a class="nav-link" href="#cerinta">Cerinta si Observatii</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#ex">Exemplu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#al">Algoritm</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</nav>
+</section>
+              <!---------Problema Damelor------->
+<section id="problama">
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<h2> Problema Damelor</h2>
+<div class="depre-problema">
+Problema damelor (sau problema reginelor) tratează plasarea a n regine de șah pe o tablă de șah astfel încât să nu existe două regine care se amenință reciproc. Astfel, se caută o soluție astfel încât nicio pereche de două regine să nu fie pe același rând, pe aceeași coloană, sau pe aceeași diagonală. 
+<br>Pentru prima oara problema a fost publicata in anul 1848 de compazitorul de sah Max Bezzel, iar solutiile au fot publicate in 1850 de Franz Nauck. </br>
+</div>
+</div>
+<div class="col-md-6">
+<div class="foto"><img src="imagine.jpg"></div>
+</div>
+</div>
+</div>
+</section>
+               <!---------Cerinta-------->
+<section id="cerinta">
+<div class="cont">
+<h2>Cerinta si Observatii</h2>
+<div class="row"> 
+<div class="col-md-3 text-center"> 
+<div class="icon">
+<i class="fa fa-question-circle" aria-hidden="true"></i>
+</div>
+<h3>Cerinta</h3>
+<p> Fiind dată o tablă de şah de dimensiune n x n, se cere să se aranjeze cele n dame în toate modurile posibile pe tabla de şah, astfel încât să nu se afle pe aceeaşi linie, coloană, sau diagonală (damele să nu se atace).
+</p>
+</div>
+<div class="col-md-3 text-center"> 
+<div class="icon">
+<i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+</div>
+<h3>Observatii</h3>
+<p>1. Pentru această problemă toate mulţimile Sk sunt identice, Sk={1,2,3,....,n} şi reprezintă numărul coloanelor tablei de şah. Indicele k reprezintă numărul liniei tablei de şah. Prin urmare, la pasul k selectăm un element din mulţimea Sk. 				     <p>    2. Condiţiile de continuare ale problemei : 			    a) Damele să nu fie pe aceeaşi linie - această condiţie este îndeplinită prin modul în care am organizat memorarea datelor şi anume într-o căsuţă a vectorului putem trece un singur număr de coloană. 
+b) Damele să nu fie pe aceeaşi coloană – adică v[k]≠v[i], cu 1<=i<=k-1. 						
+</p></p>
+</div>
+<div class="col-md-3 text-center"> 
+<br></br><br></br><br></br>
+<p> <p>c) Damele să nu fie pe aceeaşi diagonală. Dacă două dame se găsesc pe aceeaşi diagonală înseamnă că cele două distanţe măsurate pe linie respectiv pe coloană, dintre cele două dame sunt egale. Prin urmare condiţia ca damele să nu fie pe aceeaşi diagonală este:|v[k] - v[i]| ≠k-i , cu 1<=i<=k-1.
+</p><p>3. Obţinem o soluţie dacă am reuşit să plasăm toate cele n dame, adică k=n. 		</p>					
+</p>
+</div>
+
+
+
+<div class="col-md-2 text-center"> 
+
+<br></br><br></br><br></br>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col"> </th>
+      <th scope="col">D </th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+          <!--------------Exemplu--------->
+		  <section id="ex">
+<div class="conta">
+<h2>Exemlu</h2>
+</div>	
+<p>Să urmărim modul în care se completează vectorul soluţie v şi o reprezentare grafică a ceea ce înseamnă valorile vectorului v pe tabla de şah. 	      Reprezentarea descrie completarea vectorului până la obţinerea primei soluţii, pentru n=4. 		 
+ <p> Algoritmul de backtracking continuă în aceeaşi manieră, până la generarea tuturor soluţiilor. </p></P>	  
+ 
+ <div class="row"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<div class="col-md-4 text-center table-center"> 
+  k=1
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+ 
+</table>
+</div>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+<div class="col-md-2 text-center"> <p></p>
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">D </th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+ <div class="row"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ <div class="col-md-4 text-center table-center"> 
+  k=2
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col">1</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  </table>
+    k=2
+	
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+   </table>
+   k=2
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col">3</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+
+
+</table></div>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<div class="col-md-2 text-center"> <p></p>
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">D </th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td>D</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<p>- pe linia 3 nu mai putem plasa nici o damă, selectăm altă valoare pe linia 2 </p>
+
+<div class="row"> 
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ <div class="col-md-4 text-center table-center"> 
+  k=2
+  
+<table class="table table-bordered table-dark">
+
+  <thead>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col">4</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  </table>
+    k=3
+	
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col">4</th>
+      <th scope="col">1</th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+   </table>
+   k=3
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col">4</th>
+      <th scope="col">2</th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+
+
+</table></div>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ <div class="col-md-2 text-center"> <p></p>
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">D </th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td>D</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+ 
+ </div>
+ <br>- pe linia 4 nu putem plasa nici o damă </br>
+  <br>- pe linia 3 nici o altă coloană nu este corectă </br>
+  <br>- pe linia 2 nu mai există nici o poziţie disponibilă </br>
+  <br>- se revine la linia 1 </br>
+<div class="row"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<div class="col-md-4 text-center table-center"> 
+  k=1
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">2</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+ 
+</table>
+</div>
+
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+<div class="col-md-2 text-center"> <p></p>
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">D</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+  <div class="row"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ <div class="col-md-4 text-center table-center"> 
+  k=2
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">2</th>
+      <th scope="col">1</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  </table>
+    k=2
+	
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">2</th>
+      <th scope="col">2</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+   </table>
+   k=2
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+
+
+</table>
+ k=2
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">2</th>
+      <th scope="col">4</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+
+
+</table>
+</div>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<div class="col-md-2 text-center"> <p></p>
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">D </th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+ <div class="row"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ <div class="col-md-4 text-center table-center"> 
+  k=3
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">2</th>
+      <th scope="col">4</th>
+      <th scope="col">1</th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  </table>
+ </div>
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<div class="col-md-2 text-center"> <p></p>
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">D </th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <th scope="row">D</th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+ </div>
+ 
+ <div class="row"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ <div class="col-md-4 text-center table-center"> 
+  k=4
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">2</th>
+      <th scope="col">4</th>
+      <th scope="col">1</th>
+      <th scope="col">1</th>
+    </tr>
+  </thead>
+  </table>
+    k=4
+	
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">2</th>
+      <th scope="col">4</th>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+    </tr>
+  </thead>
+   </table>
+   k=4
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">2</th>
+      <th scope="col">4</th>
+      <th scope="col">1</th>
+      <th scope="col">3</th>
+    </tr>
+  </thead>
+
+
+</table>
+
+
+</table>
+</div>
+ 
+
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<div class="col-md-2 text-center"> <p></p>
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">D </th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <th scope="row">D</th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td>D</td>
+      <td></td>
+      
+    </tr>
+  </tbody>
+</table>
+</div>
+ 
+ 
+</section>
+  <!--------------Algoritm--------->
+		  <section id="al">
+<div class="contai">
+<div class="icon">
+ <i class="fa fa-laptop" aria-hidden="true"></i>
+</div>
+<h2>Algoritm</h2>
+</div>	
+</section>
+<section id="algo">
+
+&nbsp &nbsp &nbsp &nbsp &nbsp <code class="algr"> #include < iostream.h >
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp #include < math.h ></br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbspint n,v[100],sol;</br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp void afisare()</br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbsp{int i,j,x; </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp  sol++; cout<<"Solutia: " << sol << endl; </br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbsp for (i=1;i<=n;i++) </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp  {for (j=1;j<=n;j++) </br>
+<br> &nbsp &nbsp &nbsp &nbsp &nbsp if (v[i]==j) cout << "D "; </br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbsp else cout<<"_ "; </br>
+&nbsp &nbsp &nbsp &nbsp &nbsp  cout << endl; </br>
+<br> &nbsp &nbsp &nbsp &nbsp &nbsp <br>} </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp } </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp int valid(int k) </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp {int i; </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp  for (i=1;i<=k-1;i++) </br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbsp if ((v[i]==v[k])||(abs(v[k]-v[i])==(k-i))) </br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbsp return 0; </br>
+<br> &nbsp &nbsp &nbsp &nbsp &nbsp return 1;} </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp int solutie(int k)</br> 
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp {if (k==n) </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp  return 1;</br> 
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp return 0;} </br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbspvoid BK(int k) </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp {int i;</br> 
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp  for (i=1;i<=n;i++) </br>
+<br> &nbsp &nbsp &nbsp &nbsp &nbsp {v[k]=i; </br>
+ <br> &nbsp &nbsp &nbsp &nbsp &nbsp if (valid(k)==1) </br>
+<br> &nbsp &nbsp &nbsp &nbsp &nbsp{if (solutie(k)==1) </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp  afisare();</br>
+<br> &nbsp &nbsp &nbsp &nbsp &nbsp else </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp  BK(k+1); </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp } </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp  } </br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbsp} </br>
+<br>&nbsp &nbsp &nbsp &nbsp &nbsp void main() </br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbsp{cout<<"n= ";cin>>n;</br>
+<br> &nbsp &nbsp &nbsp &nbsp &nbsp BK(1);</br>
+ <br>&nbsp &nbsp &nbsp &nbsp &nbsp}</br></code>
+</section>
+<script src="js/smooth-scroll.js"></script>
+<script> var scroll= new SmoothScrool('a[herf*="#"]'); </script>
+
+</body>
+</html>
