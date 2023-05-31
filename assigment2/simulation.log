@@ -1,0 +1,356 @@
+Waiting clients: [Task{taskId=1, processingTime=4, arrivalTime=2, timeAddedToServer=0}, Task{taskId=5, processingTime=6, arrivalTime=2, timeAddedToServer=0}, Task{taskId=9, processingTime=3, arrivalTime=2, timeAddedToServer=0}, Task{taskId=11, processingTime=6, arrivalTime=2, timeAddedToServer=0}, Task{taskId=18, processingTime=4, arrivalTime=2, timeAddedToServer=0}, Task{taskId=21, processingTime=4, arrivalTime=2, timeAddedToServer=0}, Task{taskId=25, processingTime=6, arrivalTime=2, timeAddedToServer=0}, Task{taskId=0, processingTime=3, arrivalTime=3, timeAddedToServer=0}, Task{taskId=7, processingTime=6, arrivalTime=3, timeAddedToServer=0}, Task{taskId=10, processingTime=5, arrivalTime=3, timeAddedToServer=0}, Task{taskId=19, processingTime=3, arrivalTime=3, timeAddedToServer=0}, Task{taskId=8, processingTime=3, arrivalTime=4, timeAddedToServer=0}, Task{taskId=17, processingTime=6, arrivalTime=4, timeAddedToServer=0}, Task{taskId=20, processingTime=3, arrivalTime=4, timeAddedToServer=0}, Task{taskId=22, processingTime=6, arrivalTime=4, timeAddedToServer=0}, Task{taskId=2, processingTime=6, arrivalTime=5, timeAddedToServer=0}, Task{taskId=3, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=16, processingTime=5, arrivalTime=5, timeAddedToServer=0}, Task{taskId=23, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=28, processingTime=3, arrivalTime=5, timeAddedToServer=0}, Task{taskId=4, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=6, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=13, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=14, processingTime=6, arrivalTime=6, timeAddedToServer=0}, Task{taskId=27, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=29, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=12, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=15, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=24, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=26, processingTime=4, arrivalTime=7, timeAddedToServer=0}]
+Time 0
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: [Task{taskId=1, processingTime=4, arrivalTime=2, timeAddedToServer=0}, Task{taskId=5, processingTime=6, arrivalTime=2, timeAddedToServer=0}, Task{taskId=9, processingTime=3, arrivalTime=2, timeAddedToServer=0}, Task{taskId=11, processingTime=6, arrivalTime=2, timeAddedToServer=0}, Task{taskId=18, processingTime=4, arrivalTime=2, timeAddedToServer=0}, Task{taskId=21, processingTime=4, arrivalTime=2, timeAddedToServer=0}, Task{taskId=25, processingTime=6, arrivalTime=2, timeAddedToServer=0}, Task{taskId=0, processingTime=3, arrivalTime=3, timeAddedToServer=0}, Task{taskId=7, processingTime=6, arrivalTime=3, timeAddedToServer=0}, Task{taskId=10, processingTime=5, arrivalTime=3, timeAddedToServer=0}, Task{taskId=19, processingTime=3, arrivalTime=3, timeAddedToServer=0}, Task{taskId=8, processingTime=3, arrivalTime=4, timeAddedToServer=0}, Task{taskId=17, processingTime=6, arrivalTime=4, timeAddedToServer=0}, Task{taskId=20, processingTime=3, arrivalTime=4, timeAddedToServer=0}, Task{taskId=22, processingTime=6, arrivalTime=4, timeAddedToServer=0}, Task{taskId=2, processingTime=6, arrivalTime=5, timeAddedToServer=0}, Task{taskId=3, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=16, processingTime=5, arrivalTime=5, timeAddedToServer=0}, Task{taskId=23, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=28, processingTime=3, arrivalTime=5, timeAddedToServer=0}, Task{taskId=4, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=6, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=13, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=14, processingTime=6, arrivalTime=6, timeAddedToServer=0}, Task{taskId=27, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=29, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=12, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=15, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=24, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=26, processingTime=4, arrivalTime=7, timeAddedToServer=0}]
+Time 1
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Task 1 dispatched to server 1 at time 00:00:02
+Task 5 dispatched to server 5 at time 00:00:02
+Task 9 dispatched to server 9 at time 00:00:02
+Task 11 dispatched to server 11 at time 00:00:02
+Task 18 dispatched to server 18 at time 00:00:02
+Task 21 dispatched to server 21 at time 00:00:02
+Task 25 dispatched to server 25 at time 00:00:02
+Waiting clients: [Task{taskId=0, processingTime=3, arrivalTime=3, timeAddedToServer=0}, Task{taskId=7, processingTime=6, arrivalTime=3, timeAddedToServer=0}, Task{taskId=10, processingTime=5, arrivalTime=3, timeAddedToServer=0}, Task{taskId=19, processingTime=3, arrivalTime=3, timeAddedToServer=0}, Task{taskId=8, processingTime=3, arrivalTime=4, timeAddedToServer=0}, Task{taskId=17, processingTime=6, arrivalTime=4, timeAddedToServer=0}, Task{taskId=20, processingTime=3, arrivalTime=4, timeAddedToServer=0}, Task{taskId=22, processingTime=6, arrivalTime=4, timeAddedToServer=0}, Task{taskId=2, processingTime=6, arrivalTime=5, timeAddedToServer=0}, Task{taskId=3, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=16, processingTime=5, arrivalTime=5, timeAddedToServer=0}, Task{taskId=23, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=28, processingTime=3, arrivalTime=5, timeAddedToServer=0}, Task{taskId=4, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=6, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=13, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=14, processingTime=6, arrivalTime=6, timeAddedToServer=0}, Task{taskId=27, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=29, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=12, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=15, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=24, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=26, processingTime=4, arrivalTime=7, timeAddedToServer=0}]
+Time 2
+Waiting clients: [(1,4,2), (18,4,2), (5,6,2), (21,4,2), (9,3,2), (25,6,2), (11,6,2)]
+Queue 1: [(1,4,2), (18,4,2)]
+Queue 2: [(5,6,2), (21,4,2)]
+Queue 3: [(9,3,2), (25,6,2)]
+Queue 4: [(11,6,2)]
+
+Task 0 dispatched to server 0 at time 00:00:03
+Task 7 dispatched to server 7 at time 00:00:03
+Task 10 dispatched to server 10 at time 00:00:03
+Task 19 dispatched to server 19 at time 00:00:03
+Waiting clients: [Task{taskId=8, processingTime=3, arrivalTime=4, timeAddedToServer=0}, Task{taskId=17, processingTime=6, arrivalTime=4, timeAddedToServer=0}, Task{taskId=20, processingTime=3, arrivalTime=4, timeAddedToServer=0}, Task{taskId=22, processingTime=6, arrivalTime=4, timeAddedToServer=0}, Task{taskId=2, processingTime=6, arrivalTime=5, timeAddedToServer=0}, Task{taskId=3, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=16, processingTime=5, arrivalTime=5, timeAddedToServer=0}, Task{taskId=23, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=28, processingTime=3, arrivalTime=5, timeAddedToServer=0}, Task{taskId=4, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=6, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=13, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=14, processingTime=6, arrivalTime=6, timeAddedToServer=0}, Task{taskId=27, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=29, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=12, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=15, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=24, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=26, processingTime=4, arrivalTime=7, timeAddedToServer=0}]
+Time 3
+Waiting clients: [(1,4,2), (18,4,2), (5,6,2), (21,4,2), (9,3,2), (25,6,2), (11,6,2), (7,6,3), (10,5,3), (19,3,3), (0,3,3)]
+Queue 1: [(1,4,2), (18,4,2), (7,6,3)]
+Queue 2: [(5,6,2), (21,4,2), (10,5,3)]
+Queue 3: [(9,3,2), (25,6,2), (19,3,3)]
+Queue 4: [(11,6,2), (0,3,3)]
+
+Task 8 dispatched to server 8 at time 00:00:04
+Task 17 dispatched to server 17 at time 00:00:04
+Task 20 dispatched to server 20 at time 00:00:04
+Task 22 dispatched to server 22 at time 00:00:04
+Waiting clients: [Task{taskId=2, processingTime=6, arrivalTime=5, timeAddedToServer=0}, Task{taskId=3, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=16, processingTime=5, arrivalTime=5, timeAddedToServer=0}, Task{taskId=23, processingTime=4, arrivalTime=5, timeAddedToServer=0}, Task{taskId=28, processingTime=3, arrivalTime=5, timeAddedToServer=0}, Task{taskId=4, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=6, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=13, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=14, processingTime=6, arrivalTime=6, timeAddedToServer=0}, Task{taskId=27, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=29, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=12, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=15, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=24, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=26, processingTime=4, arrivalTime=7, timeAddedToServer=0}]
+Time 4
+Waiting clients: [(18,4,2), (5,6,2), (21,4,2), (25,6,2), (11,6,2), (7,6,3), (10,5,3), (19,3,3), (0,3,3), (8,3,4), (22,6,4), (17,6,4), (20,3,4)]
+Queue 1: [(18,4,2), (7,6,3), (8,3,4), (22,6,4)]
+Queue 2: [(5,6,2), (21,4,2), (10,5,3)]
+Queue 3: [(25,6,2), (19,3,3), (17,6,4)]
+Queue 4: [(11,6,2), (0,3,3), (20,3,4)]
+
+Task 2 dispatched to server 2 at time 00:00:05
+Task 3 dispatched to server 3 at time 00:00:05
+Task 16 dispatched to server 16 at time 00:00:05
+Task 23 dispatched to server 23 at time 00:00:05
+Task 28 dispatched to server 28 at time 00:00:05
+Waiting clients: [Task{taskId=4, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=6, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=13, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=14, processingTime=6, arrivalTime=6, timeAddedToServer=0}, Task{taskId=27, processingTime=3, arrivalTime=6, timeAddedToServer=0}, Task{taskId=29, processingTime=5, arrivalTime=6, timeAddedToServer=0}, Task{taskId=12, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=15, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=24, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=26, processingTime=4, arrivalTime=7, timeAddedToServer=0}]
+Time 5
+Waiting clients: [(18,4,2), (21,4,2), (25,6,2), (7,6,3), (10,5,3), (19,3,3), (0,3,3), (8,3,4), (22,6,4), (17,6,4), (20,3,4), (2,6,5), (16,5,5), (23,4,5), (3,4,5), (28,3,5)]
+Queue 1: [(18,4,2), (7,6,3), (8,3,4), (22,6,4)]
+Queue 2: [(21,4,2), (10,5,3), (2,6,5), (16,5,5)]
+Queue 3: [(25,6,2), (19,3,3), (17,6,4), (23,4,5)]
+Queue 4: [(0,3,3), (20,3,4), (3,4,5), (28,3,5)]
+
+Task 4 dispatched to server 4 at time 00:00:06
+Task 6 dispatched to server 6 at time 00:00:06
+Task 13 dispatched to server 13 at time 00:00:06
+Task 14 dispatched to server 14 at time 00:00:06
+Task 27 dispatched to server 27 at time 00:00:06
+Task 29 dispatched to server 29 at time 00:00:06
+Waiting clients: [Task{taskId=12, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=15, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=24, processingTime=6, arrivalTime=7, timeAddedToServer=0}, Task{taskId=26, processingTime=4, arrivalTime=7, timeAddedToServer=0}]
+Time 6
+Waiting clients: [(21,4,2), (25,6,2), (7,6,3), (10,5,3), (19,3,3), (0,3,3), (8,3,4), (22,6,4), (17,6,4), (20,3,4), (2,6,5), (16,5,5), (23,4,5), (3,4,5), (28,3,5), (4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (27,3,6)]
+Queue 1: [(7,6,3), (8,3,4), (22,6,4), (4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(21,4,2), (10,5,3), (2,6,5), (16,5,5), (13,5,6)]
+Queue 3: [(25,6,2), (19,3,3), (17,6,4), (23,4,5), (14,6,6)]
+Queue 4: [(0,3,3), (20,3,4), (3,4,5), (28,3,5), (27,3,6)]
+
+Task 12 dispatched to server 12 at time 00:00:07
+Task 15 dispatched to server 15 at time 00:00:07
+Task 24 dispatched to server 24 at time 00:00:07
+Task 26 dispatched to server 26 at time 00:00:07
+Waiting clients: []
+Time 7
+Waiting clients: [(7,6,3), (10,5,3), (19,3,3), (8,3,4), (22,6,4), (17,6,4), (20,3,4), (2,6,5), (16,5,5), (23,4,5), (3,4,5), (28,3,5), (4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (27,3,6), (12,6,7), (26,4,7), (15,6,7), (24,6,7)]
+Queue 1: [(7,6,3), (8,3,4), (22,6,4), (4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(10,5,3), (2,6,5), (16,5,5), (13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(19,3,3), (17,6,4), (23,4,5), (14,6,6), (15,6,7)]
+Queue 4: [(20,3,4), (3,4,5), (28,3,5), (27,3,6), (24,6,7)]
+
+Waiting clients: []
+Time 8
+Waiting clients: [(7,6,3), (10,5,3), (8,3,4), (22,6,4), (17,6,4), (2,6,5), (16,5,5), (23,4,5), (3,4,5), (28,3,5), (4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (27,3,6), (12,6,7), (26,4,7), (15,6,7), (24,6,7)]
+Queue 1: [(7,6,3), (8,3,4), (22,6,4), (4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(10,5,3), (2,6,5), (16,5,5), (13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(17,6,4), (23,4,5), (14,6,6), (15,6,7)]
+Queue 4: [(3,4,5), (28,3,5), (27,3,6), (24,6,7)]
+
+Waiting clients: []
+Time 9
+Waiting clients: [(10,5,3), (8,3,4), (22,6,4), (17,6,4), (2,6,5), (16,5,5), (23,4,5), (3,4,5), (28,3,5), (4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (27,3,6), (12,6,7), (26,4,7), (15,6,7), (24,6,7)]
+Queue 1: [(8,3,4), (22,6,4), (4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(10,5,3), (2,6,5), (16,5,5), (13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(17,6,4), (23,4,5), (14,6,6), (15,6,7)]
+Queue 4: [(3,4,5), (28,3,5), (27,3,6), (24,6,7)]
+
+Waiting clients: []
+Time 10
+Waiting clients: [(8,3,4), (22,6,4), (17,6,4), (2,6,5), (16,5,5), (23,4,5), (28,3,5), (4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (27,3,6), (12,6,7), (26,4,7), (15,6,7), (24,6,7)]
+Queue 1: [(8,3,4), (22,6,4), (4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(2,6,5), (16,5,5), (13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(17,6,4), (23,4,5), (14,6,6), (15,6,7)]
+Queue 4: [(28,3,5), (27,3,6), (24,6,7)]
+
+Waiting clients: []
+Time 11
+Waiting clients: [(22,6,4), (2,6,5), (16,5,5), (23,4,5), (28,3,5), (4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (27,3,6), (12,6,7), (26,4,7), (15,6,7), (24,6,7)]
+Queue 1: [(22,6,4), (4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(2,6,5), (16,5,5), (13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(23,4,5), (14,6,6), (15,6,7)]
+Queue 4: [(28,3,5), (27,3,6), (24,6,7)]
+
+Waiting clients: []
+Time 12
+Waiting clients: [(22,6,4), (2,6,5), (16,5,5), (23,4,5), (4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (27,3,6), (12,6,7), (26,4,7), (15,6,7), (24,6,7)]
+Queue 1: [(22,6,4), (4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(2,6,5), (16,5,5), (13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(23,4,5), (14,6,6), (15,6,7)]
+Queue 4: [(27,3,6), (24,6,7)]
+
+Waiting clients: []
+Time 13
+Waiting clients: [(22,6,4), (16,5,5), (4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (12,6,7), (26,4,7), (15,6,7), (24,6,7)]
+Queue 1: [(22,6,4), (4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(16,5,5), (13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(14,6,6), (15,6,7)]
+Queue 4: [(24,6,7)]
+
+Waiting clients: []
+Time 14
+Waiting clients: [(16,5,5), (4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (12,6,7), (26,4,7), (15,6,7), (24,6,7)]
+Queue 1: [(4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(16,5,5), (13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(14,6,6), (15,6,7)]
+Queue 4: [(24,6,7)]
+
+Waiting clients: []
+Time 15
+Waiting clients: [(4,5,6), (6,3,6), (29,5,6), (13,5,6), (14,6,6), (12,6,7), (26,4,7), (15,6,7), (24,6,7)]
+Queue 1: [(4,5,6), (6,3,6), (29,5,6)]
+Queue 2: [(13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(14,6,6), (15,6,7)]
+Queue 4: [(24,6,7)]
+
+Waiting clients: []
+Time 16
+Waiting clients: [(6,3,6), (29,5,6), (13,5,6), (12,6,7), (26,4,7), (15,6,7)]
+Queue 1: [(6,3,6), (29,5,6)]
+Queue 2: [(13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(15,6,7)]
+Queue 4: closed
+
+Waiting clients: []
+Time 17
+Waiting clients: [(6,3,6), (29,5,6), (13,5,6), (12,6,7), (26,4,7), (15,6,7)]
+Queue 1: [(6,3,6), (29,5,6)]
+Queue 2: [(13,5,6), (12,6,7), (26,4,7)]
+Queue 3: [(15,6,7)]
+Queue 4: closed
+
+Waiting clients: []
+Time 18
+Waiting clients: [(29,5,6), (12,6,7), (26,4,7), (15,6,7)]
+Queue 1: [(29,5,6)]
+Queue 2: [(12,6,7), (26,4,7)]
+Queue 3: [(15,6,7)]
+Queue 4: closed
+
+Waiting clients: []
+Time 19
+Waiting clients: [(29,5,6), (12,6,7), (26,4,7)]
+Queue 1: [(29,5,6)]
+Queue 2: [(12,6,7), (26,4,7)]
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 20
+Waiting clients: [(12,6,7), (26,4,7)]
+Queue 1: closed
+Queue 2: [(12,6,7), (26,4,7)]
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 21
+Waiting clients: [(26,4,7)]
+Queue 1: closed
+Queue 2: [(26,4,7)]
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 22
+Waiting clients: [(26,4,7)]
+Queue 1: closed
+Queue 2: [(26,4,7)]
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 23
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 24
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 25
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 26
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 27
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 28
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 29
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 30
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 31
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 32
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 33
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 34
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 35
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 36
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 37
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 38
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Waiting clients: []
+Time 39
+Waiting clients: []
+Queue 1: closed
+Queue 2: closed
+Queue 3: closed
+Queue 4: closed
+
+Average waiting time: 0.0
+Simulation ended at time 40
+Average waiting time: 0.0 seconds
+Average service time: 0.0 seconds
+Peak hour: -1
+
